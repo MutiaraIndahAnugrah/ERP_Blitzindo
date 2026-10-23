@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-29 04:05:39.908921",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nama_vendor",
+  "jasa"
+ ],
+ "fields": [
+  {
+   "fieldname": "nama_vendor",
+   "fieldtype": "Data",
+   "label": "Nama Vendor"
+  },
+  {
+   "fieldname": "jasa",
+   "fieldtype": "Data",
+   "label": "Jasa"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-29 04:05:39.908921",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Legal Iso List Vendor",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

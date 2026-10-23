@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "creation": "2022-04-25 20:00:39.469805",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "currency",
+  "price_list",
+  "qty",
+  "rate",
+  "column_break_5",
+  "amount",
+  "type",
+  "site",
+  "create_po",
+  "purchase_order",
+  "supplier",
+  "status",
+  "detail_order",
+  "from_bundle"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "options": "currency",
+   "read_only_depends_on": "eval:!frappe.user.has_role('System Manager')"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Read Only",
+   "label": "Site"
+  },
+  {
+   "depends_on": "eval:doc.parenttype==\"Project\"",
+   "fieldname": "create_po",
+   "fieldtype": "Button",
+   "label": "Create PO"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Complete\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Visa\nLegal"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "detail_order",
+   "fieldtype": "Link",
+   "label": "Detail Order",
+   "no_copy": 1,
+   "options": "Detail Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_bundle",
+   "fieldtype": "Read Only",
+   "label": "From Bundle",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "label": "Purchase Order",
+   "options": "Purchase Order",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.parenttype==\"Project\"",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-10-25 14:12:09.652815",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Order Cost",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

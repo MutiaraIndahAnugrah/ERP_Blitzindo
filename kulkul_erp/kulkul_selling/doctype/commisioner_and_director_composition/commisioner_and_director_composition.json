@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-04 00:18:22.007943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "nama",
+  "identity_card",
+  "npwp",
+  "family_card_kk"
+ ],
+ "fields": [
+  {
+   "default": "Bukan",
+   "description": "Jika nama sama dengan Pemegang Saham maka tidak perlu upload ulang Dokumen.",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Bukan\nPemegang Saham"
+  },
+  {
+   "fieldname": "nama",
+   "fieldtype": "Data",
+   "label": "Nama"
+  },
+  {
+   "fieldname": "identity_card",
+   "fieldtype": "Attach",
+   "label": "Identity Card - KTP"
+  },
+  {
+   "fieldname": "npwp",
+   "fieldtype": "Attach",
+   "label": "Taxpayer Identification Number (NPWP)"
+  },
+  {
+   "fieldname": "family_card_kk",
+   "fieldtype": "Attach",
+   "label": "Family Card - Kartu Keluarga"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-04 00:19:19.695461",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Commisioner and Director Composition",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

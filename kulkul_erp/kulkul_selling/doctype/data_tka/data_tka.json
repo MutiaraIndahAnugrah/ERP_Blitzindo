@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-22 19:09:39.682573",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tka",
+  "document_passport",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_passport",
+   "fieldtype": "Attach",
+   "label": "Document Passport"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "tka",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "TKA",
+   "options": "Tenaga Kerja"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-21 08:16:38.551559",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Data TKA",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

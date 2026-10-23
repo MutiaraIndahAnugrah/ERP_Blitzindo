@@ -1,0 +1,145 @@
+<footer id="site-footer" class="site-footer bg-second" style="margin-top: 100px;">
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div id="media_image-1" class="widget widget_media_image">
+                        <a href="/index"><img src="/assets/kulkul_erp/costume/images/logo-white.png" class="img-fluid" style="max-width: 450px; max-height: 90px" alt=""></a>
+                    </div>
+                    <div id="custom_html-1" class="widget_text widget widget_custom_html">
+                        <div class="textwidget custom-html-widget">
+                            <p>Our teams are professional in providing service to our clients especially for foreigners in visa and other documents handling.</p>
+
+                            <div class="ot-socials">
+                                <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                                <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                                <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a>
+                                <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col-lg-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <section id="custom_html-2" class="widget_text widget widget_custom_html padding-left">
+                        <h4 class="widget-title">Services</h4>
+                        <div class="textwidget custom-html-widget">
+                            <ul class="padd-left">
+                                <li><a href="/services/working-visa">Working Visa</a></li>
+                                <li><a href="/services/business-visa">Business Visa</a></li>
+                                <li><a href="/services/company-establishment">Company Establishment</a></li>
+                                <li><a href="/services/other-service">Other Service</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <!-- end col-lg-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <section id="custom_html-3" class="widget_text widget widget_custom_html padding-left">
+                        <h4 class="widget-title">Page</h4>
+                        <div class="textwidget custom-html-widget">
+                            <ul class="padd-left">
+                                <li><a href="/index">Home</a></li>
+                                <!-- <li><a href="/about">About Us</a></li> -->
+                                <li><a href="blog">Blog</a></li>
+                                <li><a href="contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <!-- end col-lg-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <section id="mc4wp_form_widget-1" class="widget widget_mc4wp_form_widget">
+                        <h4 class="widget-title">Subscribe</h4>
+                        <!-- Mailchimp for WordPress v4.5.2 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                        <!-- <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1696" method="post" data-id="1696" data-name="Blitzindo Utama Subscribe">
+                            <div class="mc4wp-form-fields">
+                                <div class="footer-sub">
+                                    <input type="text" class="form-control" name="NAME" placeholder="Name" required="">
+                                    <input type="email" class="form-control" name="EMAIL" placeholder="Email Address" required="">
+                                    <input type="submit" class="btn btn-primary" value="Subscribe">
+                                </div>
+                            </div>
+                            <input type="hidden" name="_mc4wp_timestamp" value="1560227031">
+                            <input type="hidden" name="_mc4wp_form_id" value="1696">
+                            <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1">
+                            <div class="mc4wp-response"></div>
+                        </form> -->
+                        {% if not hide_footer_signup %}
+                            <div class="input-group">
+                                <input type="text" class="form-control"
+                                    id="footer-subscribe-email"
+                                    placeholder="{{ _('Your email address...') }}"
+                                    aria-label="{{ _('Your email address...') }}"
+                                    aria-describedby="footer-subscribe-button">
+                                <div class="input-group-append">
+                                    <button class="btn btn-sm btn-default"
+                                        type="button" id="footer-subscribe-button">{{ _("Get Updates") }}</button>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <!-- / Mailchimp for WordPress Plugin -->
+                    </section>
+                </div>
+                <!-- end col-lg-3 -->
+
+            </div>
+        </div>
+    </div>
+    <!-- .main-footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-copyright">
+                        © 2022 Finacial Consulting by <a target="_blank" href="#">Blitzindo Utama</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-nav text-right footer-mobile-center">
+                        <ul id="footer-menu" class="none-style">
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .copyright-footer -->
+    <a id="back-to-top" href="#" class="show"></a>
+</footer>
+<script>
+    frappe.ready(function() {
+        $("#footer-subscribe-button").click(function() {
+    
+            if($("#footer-subscribe-email").val() && validate_email($("#footer-subscribe-email").val())) {
+                $("#footer-subscribe-email").attr('disabled', true);
+                $("#footer-subscribe-button").html("Sending...")
+                    .attr("disabled", true);
+                erpnext.subscribe_to_newsletter({
+                    email: $("#footer-subscribe-email").val(),
+                    callback: function(r) {
+                        if(!r.exc) {
+                            $("#footer-subscribe-button").html(__("Added"))
+                                .attr("disabled", true);
+                        } else {
+                            $("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+                                .addClass("btn-danger").attr("disabled", false);
+                            $("#footer-subscribe-email").val("").attr('disabled', false);
+                        }
+                    }
+                });
+            }
+            else{
+                frappe.msgprint(frappe._("Please enter valid email address"))
+            }
+        });
+    });
+</script>

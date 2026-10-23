@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-29 02:17:50.077310",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "wna_atau_wni",
+  "kartu_identitas_identity_card",
+  "kitas",
+  "jabatan",
+  "tanggal_diterima",
+  "alamat_domisili",
+  "pendidikan"
+ ],
+ "fields": [
+  {
+   "default": "WNA",
+   "fieldname": "wna_atau_wni",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "WNA / WNI",
+   "options": "WNA\nWNI",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kartu_identitas_identity_card",
+   "fieldtype": "Attach",
+   "label": "Kartu Identitas - Identity Card"
+  },
+  {
+   "depends_on": "eval:doc.wna_atau_wni == 'WNA'",
+   "fieldname": "kitas",
+   "fieldtype": "Attach",
+   "label": "KITAS"
+  },
+  {
+   "fieldname": "jabatan",
+   "fieldtype": "Data",
+   "label": "Jabatan - Position"
+  },
+  {
+   "fieldname": "tanggal_diterima",
+   "fieldtype": "Date",
+   "label": "Tanggal Diterima - Start Work Date"
+  },
+  {
+   "fieldname": "alamat_domisili",
+   "fieldtype": "Small Text",
+   "label": "Alamat Domisili - Domicille Address"
+  },
+  {
+   "description": "Contoh: s1 tehnik mesin, s2 manajemen, dll",
+   "fieldname": "pendidikan",
+   "fieldtype": "Small Text",
+   "label": "Pendidikan - Education"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-29 02:17:56.413749",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Data Pekerja Employee Information",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

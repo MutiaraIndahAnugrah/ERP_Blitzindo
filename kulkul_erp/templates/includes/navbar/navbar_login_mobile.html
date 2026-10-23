@@ -1,0 +1,25 @@
+{% if not only_static %}
+	{% if frappe.session.user != 'Guest' %}
+	<li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)" style="padding-right: 15px;">{{ frappe.session.user }}</a>
+		<ul class="sub-menu">
+			<li class="menu-item-1760"><a href="/app">{{ _('Switch To Desk') }}</a></li>
+			<li class="menu-item-1791">
+				<a class="dropdown-item" href="/track-order">Track Order</a>
+			</li>
+			{%- for child in post_login -%}
+			{%- if child.url -%}
+			<li class="menu-item-1791">
+				<a href="{{ child.url | abs_url }}"  {% if child.open_in_new_tab %} target="_blank" {% endif %} rel="nofollow">
+					{{ child.label }}
+				</a>
+			</li>
+			{%- endif -%}
+			{%- endfor -%}
+		</ul>
+	</li>
+	{% endif %}
+
+	{% if not hide_login and frappe.session.user == 'Guest' %}
+		<li><a href="/login">{{ _("Register / Login") }}</a></li>
+	{% endif %}
+{% endif %}

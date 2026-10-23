@@ -1,0 +1,1 @@
+Reserve Order {{ doc.name }} (Visa) has been approved.

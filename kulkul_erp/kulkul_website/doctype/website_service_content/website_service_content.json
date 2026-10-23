@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WSC-{type}",
+ "creation": "2022-05-23 04:09:43.086323",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "column_break_2",
+  "thumbnail_icon",
+  "section_break_4",
+  "content_thumbnail",
+  "content_full",
+  "section_break_5",
+  "background_page_header",
+  "content_image_1",
+  "column_break_8",
+  "content_image_2",
+  "content_image_3"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Working Visa\nBusiness Visa\nCompany Establishment\nOther Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "content_thumbnail",
+   "fieldtype": "Small Text",
+   "label": "Content Thumbnail ",
+   "mandatory_depends_on": "eval:doc.type != 'Other Service'",
+   "width": "100%"
+  },
+  {
+   "description": "Reference : https://getbootstrap.com/docs/3.3/",
+   "fieldname": "content_full",
+   "fieldtype": "HTML Editor",
+   "label": "Content Full",
+   "reqd": 1
+  },
+  {
+   "description": "Reference : https://ionic.io/ionicons/v4",
+   "fieldname": "thumbnail_icon",
+   "fieldtype": "Data",
+   "label": "Thumbnail Icon"
+  },
+  {
+   "description": "Ukuran Optimal Image adalah : <span style=\"color: red;\">1920x620</span>",
+   "fieldname": "background_page_header",
+   "fieldtype": "Attach Image",
+   "label": "Background Page Header",
+   "reqd": 1
+  },
+  {
+   "fieldname": "content_image_1",
+   "fieldtype": "Attach Image",
+   "label": "Content Image 1"
+  },
+  {
+   "fieldname": "content_image_2",
+   "fieldtype": "Attach Image",
+   "label": "Content Image 2"
+  },
+  {
+   "fieldname": "content_image_3",
+   "fieldtype": "Attach Image",
+   "label": "Content Image 3"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-23 08:19:04.430451",
+ "modified_by": "Administrator",
+ "module": "Kulkul Website",
+ "name": "Website Service Content",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "type",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

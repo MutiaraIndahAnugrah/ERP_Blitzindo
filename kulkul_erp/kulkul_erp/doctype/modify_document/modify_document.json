@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-08 01:56:01.003341",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_target",
+  "action",
+  "id_document"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_target",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Doctype",
+   "options": "Quotation\nOrder Form\nDetail Order\nReserve Order\nWork Orders\nPurchase Order\nCustomer\nTenaga Kerja\nResult Document\nSales Order\nRPTKA\nJabatan RPTKA\nData Pengguna RPTKA\nOrder Form Items\nOrder Cost\nItem\nItem Price\nPrice List\nUser\nEmail Queue\nFile\nContact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action",
+   "options": "Delete\nCancel",
+   "reqd": 1
+  },
+  {
+   "description": "Bisa banyak sekaligus. Satu line satu ID Document. Contoh : <b><a target=\"_blank\">https://erp.blitzindoutama.com/files/example-id-document.png</a></b>",
+   "fieldname": "id_document",
+   "fieldtype": "Small Text",
+   "label": "ID Dokumen",
+   "reqd": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-10-10 05:14:39.245253",
+ "modified_by": "Administrator",
+ "module": "Kulkul Erp",
+ "name": "Modify Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

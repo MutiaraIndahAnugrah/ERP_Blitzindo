@@ -1,0 +1,41 @@
+{
+ "based_on": "",
+ "chart_name": "Result Document Group By Status Expired Custom",
+ "chart_type": "Report",
+ "color": "#b0ff70",
+ "creation": "2022-06-28 11:10:45.623597",
+ "custom_options": "",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_based_on": "status_chart_expired",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2022-06-28 11:05:12.727866",
+ "modified": "2022-06-28 11:10:45.623597",
+ "modified_by": "Administrator",
+ "module": "Dashboard Blitzindo",
+ "name": "Result Document Group By Status Expired Custom",
+ "number_of_groups": 5,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "report_name": "Result Document Group By Status Expired",
+ "source": "",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Donut",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "x_field": "status_expired_date",
+ "y_axis": [
+  {
+   "color": "#ED6396",
+   "y_field": "count(name)"
+  }
+ ]
+}

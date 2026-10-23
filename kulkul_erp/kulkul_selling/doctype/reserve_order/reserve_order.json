@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-03-23 11:26:12.717475",
+ "doctype": "DocType",
+ "documentation": "https://erp.blitzindoutama.com/work-instructions/tutorial-process/membuat-order/reserve-order",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "customer_name",
+  "customer_perusahaan_sponsor",
+  "type",
+  "order_type",
+  "order_form",
+  "column_break_5",
+  "reserve_date",
+  "delivery_date",
+  "expected_delivery_date",
+  "order_category",
+  "sponsor_company",
+  "pic",
+  "pic_name",
+  "section_break_10",
+  "items",
+  "section_break_19",
+  "order_cost",
+  "section_break_20",
+  "total_order",
+  "total_cost",
+  "column_break_24",
+  "profit",
+  "section_break_15",
+  "exchange_rates",
+  "total_section",
+  "profit_loss",
+  "references_section",
+  "sales_order",
+  "work_orders",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "RES-.MM.YY.-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RES-.MM.YY.-.####"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Company\nIndividual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_form",
+   "fieldtype": "Link",
+   "label": "Order Form",
+   "options": "Order Form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "reserve_date",
+   "fieldtype": "Date",
+   "label": "Reserve Date"
+  },
+  {
+   "depends_on": "eval:doc.order_type==\"Visa\"",
+   "fetch_from": "order_form.order_category",
+   "fieldname": "order_category",
+   "fieldtype": "Select",
+   "label": "Order Category",
+   "options": "Non Sponsor\nSponsor"
+  },
+  {
+   "depends_on": "eval:doc.order_category == 'Sponsor'",
+   "fetch_from": "order_form.sponsor_company",
+   "fetch_if_empty": 1,
+   "fieldname": "sponsor_company",
+   "fieldtype": "Link",
+   "label": "Sponsor Company",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Order Form Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Reserve Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "References"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sales_order",
+   "fieldtype": "Read Only",
+   "label": "Sales Order",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "work_orders",
+   "fieldtype": "Read Only",
+   "label": "Work Orders",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "Visa\nLegal"
+  },
+  {
+   "fetch_from": "order_form.account_manager",
+   "fieldname": "pic",
+   "fieldtype": "Link",
+   "label": "PIC",
+   "options": "User"
+  },
+  {
+   "fieldname": "pic_name",
+   "fieldtype": "Read Only",
+   "label": "PIC Name"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "order_cost",
+   "fieldtype": "Table",
+   "label": "Order Cost",
+   "options": "Order Cost"
+  },
+  {
+   "default": "Today",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Profit / Loss"
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "fieldtype": "Date",
+   "label": "Expected Delivery Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "profit_loss",
+   "fieldtype": "Table",
+   "options": "Reserve Order Profit Loss",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_order",
+   "fieldtype": "Currency",
+   "label": "Total Order",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "profit",
+   "fieldtype": "Currency",
+   "label": "Profit",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exchange_rates",
+   "fieldtype": "Table",
+   "label": "Exchange Rate",
+   "options": "Exchange Rates"
+  },
+  {
+   "fetch_from": "customer.company_perusahaan_sponsor",
+   "fieldname": "customer_perusahaan_sponsor",
+   "fieldtype": "Data",
+   "label": "Customer Perusahaan Sponsor",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Order",
+   "link_fieldname": "reserve_order"
+  },
+  {
+   "link_doctype": "Project",
+   "link_fieldname": "reserve_order"
+  }
+ ],
+ "modified": "2022-07-25 14:50:45.643304",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Reserve Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "customer_name,type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

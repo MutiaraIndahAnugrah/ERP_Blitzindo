@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-05-23 12:41:29.326555",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "card_1_title",
+  "card_1_content",
+  "column_break_3",
+  "card_1_icon",
+  "section_break_4",
+  "card_2_title",
+  "card_2_content",
+  "column_break_8",
+  "card_2_icon",
+  "section_break_8",
+  "card_3_title",
+  "card_3_content",
+  "column_break_13",
+  "card_3_icon",
+  "section_break_12",
+  "card_4_title",
+  "card_4_content",
+  "column_break_18",
+  "card_4_icon"
+ ],
+ "fields": [
+  {
+   "fieldname": "card_1_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Card 1 Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_1_content",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Card 1 Content",
+   "reqd": 1
+  },
+  {
+   "description": "Reference : https://ionic.io/ionicons/v4",
+   "fieldname": "card_1_icon",
+   "fieldtype": "Data",
+   "label": "Card 1 Icon"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "card_2_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Card 2 Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_2_content",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Card 2 Content",
+   "reqd": 1
+  },
+  {
+   "description": "Reference : https://ionic.io/ionicons/v4",
+   "fieldname": "card_2_icon",
+   "fieldtype": "Data",
+   "label": "Card 2 Icon"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "card_3_title",
+   "fieldtype": "Data",
+   "label": "Card 3 Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_3_content",
+   "fieldtype": "Small Text",
+   "label": "Card 3 Content",
+   "reqd": 1
+  },
+  {
+   "description": "Reference : https://ionic.io/ionicons/v4",
+   "fieldname": "card_3_icon",
+   "fieldtype": "Data",
+   "label": "Card 3 Icon"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "card_4_title",
+   "fieldtype": "Data",
+   "label": "Card 4 Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_4_content",
+   "fieldtype": "Small Text",
+   "label": "Card 4 Content",
+   "reqd": 1
+  },
+  {
+   "description": "Reference : https://ionic.io/ionicons/v4",
+   "fieldname": "card_4_icon",
+   "fieldtype": "Data",
+   "label": "Card 4 Icon"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-05-23 12:48:20.353538",
+ "modified_by": "Administrator",
+ "module": "Kulkul Website",
+ "name": "Website Card Top",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

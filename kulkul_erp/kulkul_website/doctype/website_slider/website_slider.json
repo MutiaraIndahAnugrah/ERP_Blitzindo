@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WS-{type}-{####}",
+ "creation": "2022-05-18 12:14:36.112181",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "column_break_2",
+  "type",
+  "section_break_4",
+  "banner_title",
+  "column_break_6",
+  "banner_title_color",
+  "banner_title_font_size",
+  "section_break_6",
+  "distance_title_and_sub_title",
+  "section_break_7",
+  "banner_sub_title",
+  "column_break_12",
+  "banner_sub_title_color",
+  "banner_sub_title_font_size",
+  "section_break_15",
+  "image",
+  "column_break_3",
+  "sub_image",
+  "sub_image_size"
+ ],
+ "fields": [
+  {
+   "default": "Top",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Top\nBottom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Untuk Top Slider ukuran optimal adalah 1920x700. Untuk Bottom Slider ukuran optimal adalah 1170x550.",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Top'",
+   "description": "Ukuran optimal adalah 505x465",
+   "fieldname": "sub_image",
+   "fieldtype": "Attach Image",
+   "label": "Sub Image"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Top'",
+   "fieldname": "banner_title",
+   "fieldtype": "Data",
+   "label": "Banner Title"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Top'",
+   "fieldname": "banner_sub_title",
+   "fieldtype": "Small Text",
+   "label": "Banner Sub Title"
+  },
+  {
+   "default": "#ffffff",
+   "depends_on": "eval:doc.type == 'Top'",
+   "fieldname": "banner_title_color",
+   "fieldtype": "Color",
+   "label": "Banner Title Color"
+  },
+  {
+   "default": "#ffffff",
+   "depends_on": "eval:doc.type == 'Top'",
+   "fieldname": "banner_sub_title_color",
+   "fieldtype": "Color",
+   "label": "Banner Sub Title Color"
+  },
+  {
+   "default": "Crop Center",
+   "depends_on": "eval:doc.type == 'Top'",
+   "fieldname": "sub_image_size",
+   "fieldtype": "Select",
+   "label": "Sub Image Size",
+   "options": "Crop Center\nFixed"
+  },
+  {
+   "default": "50",
+   "depends_on": "eval:doc.type == 'Top'",
+   "description": "Jika tidak diisi atau 0 maka kan set default ke 50 / 50px",
+   "fieldname": "banner_title_font_size",
+   "fieldtype": "Int",
+   "label": "Banner Title Font Size",
+   "non_negative": 1
+  },
+  {
+   "default": "16",
+   "depends_on": "eval:doc.type == 'Top'",
+   "description": "Jika tidak diisi atau 0 maka kan set default ke 16 / 16px",
+   "fieldname": "banner_sub_title_font_size",
+   "fieldtype": "Int",
+   "label": "Banner Sub Title Font Size"
+  },
+  {
+   "default": "30",
+   "depends_on": "eval:doc.type == 'Top'",
+   "description": "Jarak antara Title dan Sub Title. Jika size font semakin besar, maka juga akan membutuhkan penyesuai jarak. Default 30 / 30px",
+   "fieldname": "distance_title_and_sub_title",
+   "fieldtype": "Int",
+   "label": "Distance Title and Sub Title"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-23 12:16:07.244572",
+ "modified_by": "Administrator",
+ "module": "Kulkul Website",
+ "name": "Website Slider",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

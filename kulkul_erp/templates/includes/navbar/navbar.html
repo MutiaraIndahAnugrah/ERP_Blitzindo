@@ -1,0 +1,196 @@
+<header id="site-header" class="site-header mobile-header-blue header-style-1">
+    <div id="header_topbar" class="header-topbar md-hidden sm-hidden clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- social icons -->
+                    <ul class="social-list fleft">
+                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
+                        </li>
+                    </ul>
+                    <!-- social icons close -->
+                    <!-- <div class="topbar-text fright"> Opening Hours : Monday to Saturday - 8am to 9pm</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar close -->
+
+    <!-- Main header start -->
+    <div class="main-header md-hidden sm-hidden">
+        <div class="main-header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-wrap-table">
+                            <div id="site-logo" class="site-logo col-media-left col-media-middle">
+                                <a href="/">
+                                    <img class="logo-static img-fluid" style="max-width: 450px; max-height: 90px" src="/assets/kulkul_erp/costume/images/logo-white.png" alt="Blitzindo Utama">
+                                    <img class="logo-scroll img-fluid" style="max-width: 450px; max-height: 90px" src="/assets/kulkul_erp/costume/images/logo-white.png" alt="Blitzindo Utama">
+                                </a>
+                            </div>
+                            <div class="col-media-body col-media-middle">
+                                <!-- contact info -->
+                                <ul class="info-list info_on_right_side fright">
+                                    <li>
+                                        <span>Address: <strong>Ruko Mega Glodok Kemayoran Blok E 18
+                                            <br> Jl. Angkasa Kav. B6,
+                                            <br> Kemayoran, Jakarta Pusat 10610</strong></span> </li>
+                                    <li>
+                                        <span>Call Us: <strong class="font-size18">+62 21 65868029</strong></span> </li>
+                                </ul>
+                                <!-- contact info close -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-mainnav">
+
+                            <div class="main-navigation fright">
+                                {% include "templates/includes/navbar/navbar_login.html" %}
+                            </div>
+                            <div id="site-navigation" class="main-navigation fleft">
+                                <ul id="primary-menu" class="menu">
+                                    <li><a href="/index">Home</a>
+                                    </li>
+                                    <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)">Services</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item-1791"><a href="/services/working-visa">Working Visa</a></li>
+                                            <li class="menu-item-1758"><a href="/services/business-visa">Business Visa</a></li>
+                                            <li class="menu-item-1790"><a href="/services/company-establishment">Company Establishment</a></li>
+                                            <li class="menu-item-1760"><a href="/services/other-service">Other Service</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- #site-navigation -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Main header close -->
+    <div class="header_mobile">
+        <div class="mlogo_wrapper clearfix">
+            <div class="mobile_logo">
+                <a href="#"><img src="/assets/kulkul_erp/costume/images/logo-white.png" class="img-fluid" style="max-width: 350px; max-height: 60px" alt="Blitzindo Utama"></a>
+            </div>
+            <div id="mmenu_toggle">
+                <button></button>
+            </div>
+        </div>
+        <div class="mmenu_wrapper">
+            <div class="mobile_nav collapse">
+                <ul id="menu-main-menu" class="mobile_mainmenu">
+                    <li class="current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor"><a href="/index">Home</a></li>
+                    <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)">Services</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-1791"><a href="/services/working-visa">Working Visa</a></li>
+                            <li class="menu-item-1758"><a href="/services/business-visa">Business Visa</a></li>
+                            <li class="menu-item-1790"><a href="/services/company-establishment">Company Establishment</a></li>
+                            <li class="menu-item-1760"><a href="/services/other-service">Other Service</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    {% include "templates/includes/navbar/navbar_login_mobile.html" %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- #site-header -->
+<script>
+    
+frappe.ready(function() {
+	$(window).on("scroll", function(){
+		var site_header = $('#site-header').outerHeight();
+		var main_header_top = $('.main-header-top').outerHeight();
+		var header_sticky = site_header - topbar_header;
+
+		if( $('#header_topbar').length ){
+			var topbar_header = $('#header_topbar').outerHeight();		    
+		}else{
+			var topbar_header = 1;
+		}		
+		
+		if ($(window).scrollTop() >= topbar_header) {	    	
+			$('.sticky-header').addClass('sticked');	        
+		}else {
+			$('.sticky-header').removeClass('sticked');		              
+		}
+	});
+
+	/* ========================================== 
+	Search on Header
+	========================================== */
+	$('.toggle_search').on("click", function(){
+		$(this).toggleClass( "active" );
+		$('.h-search-form-field').toggleClass('show');
+		if ($(this).find('i').hasClass( "fa-search" )) {
+			   $('.toggle_search > i').removeClass( "fa-search" ).addClass("fa-times");
+		}else{
+			   $('.toggle_search > i').removeClass( "fa-times" ).addClass("fa-search");
+		}
+	});
+
+	/* ========================================== 
+	Header Mobile
+	========================================== */
+	// mobile_mainmenu create span
+	$('.collapse .mobile_mainmenu li:has(ul)').prepend('<span class="arrow"><i class="fa fa-plus"></i></span>');
+
+	$( "#mmenu_toggle" ).on('click', function() {
+		$(this).toggleClass( "active" );
+
+		if ($(this).hasClass( "active" )) {
+			$('.mobile_nav').stop(true, true).slideDown();
+		}else{
+			$('.mobile_nav').stop(true, true).slideUp();
+		}		
+	});
+
+	$(".mobile_mainmenu > li span.arrow").on('click', function() {
+		$(this).parent().find("> ul").stop(true, true).slideToggle()
+		$(this).toggleClass( "active" ); 
+	});
+
+	if ($('#back-to-top').length) {
+		var scrollTrigger = 500, // px
+			backToTop = function () {
+				var scrollTop = $(window).scrollTop();
+				if (scrollTop > scrollTrigger) {
+					$('#back-to-top').addClass('show');
+				} else {
+					$('#back-to-top').removeClass('show');
+				}
+			};
+		backToTop();
+		$(window).on('scroll', function () {
+			backToTop();
+		});
+		$('#back-to-top').on('click', function (e) {
+			e.preventDefault();
+			$('html,body').animate({
+				scrollTop: 0
+			}, 700);
+		});	
+	}
+});
+</script>

@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-20 21:33:28.808064",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nama_jabatan",
+  "jumlah_jabatan",
+  "jumlah_jabatan_terpakai",
+  "jumlah_jabatan_sisa"
+ ],
+ "fields": [
+  {
+   "fieldname": "nama_jabatan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nama Jabatan",
+   "options": "Jabatan RPTKA"
+  },
+  {
+   "fieldname": "jumlah_jabatan",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Jumlah Jabatan"
+  },
+  {
+   "fieldname": "jumlah_jabatan_terpakai",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Jumlah Jabatan Terpakai",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jumlah_jabatan_sisa",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Jumlah Jabatan Sisa",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-27 23:35:19.559220",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Data Jabatan RPTKA",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

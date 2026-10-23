@@ -1,0 +1,10 @@
+{
+	"css/kulkul_erp-web.css": [
+		"public/costume/css/font-awesome.css",
+		"public/costume/css/style.css",
+		"public/css/social-icons.css"
+	],
+	"js/kulkul_erp-web.js": [
+		
+	]
+}

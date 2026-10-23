@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %} - Blitzindo Utama</title>
+
+	<link rel="stylesheet" id="bootstrap-css" href="/assets/kulkul_erp/costume/css/bootstrap.css" type="text/css" media="all">
+	<link rel="stylesheet" id="awesome-font-css" href="/assets/kulkul_erp/costume/css/font-awesome.css" type="text/css" media="all">
+	<link rel="stylesheet" id="ionicon-font-css" href="/assets/kulkul_erp/costume/css/ionicon.css" type="text/css" media="all">
+    <link rel="stylesheet" id="royal-preload-css" href="/assets/kulkul_erp/costume/css/royal-preload.css" type="text/css" media="all">
+	<link rel="stylesheet" id="slick-slider-css" href="/assets/kulkul_erp/costume/css/slick.css" type="text/css" media="all">
+	<link rel="stylesheet" id="slick-theme-css" href="/assets/kulkul_erp/costume/css/slick-theme.css" type="text/css" media="all">
+	<link rel="stylesheet" id="consultax-style-css" href="/assets/kulkul_erp/costume/css/style-original.css" type="text/css" media="all">
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/assets/kulkul_erp/costume/revolution/css/settings.css">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="/assets/kulkul_erp/costume/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/assets/kulkul_erp/costume/revolution/css/navigation.css">
+
+    <link rel="shortcut icon" href="/assets/kulkul_erp/costume/images/favicon.png">
+</head>
+<body class="royal_preloader">
+	<div id="page" class="site">
+
+    <header id="site-header" class="site-header mobile-header-blue header-style-1">
+            <div id="header_topbar" class="header-topbar md-hidden sm-hidden clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- social icons -->
+                            <ul class="social-list fleft">
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
+                                </li>
+                            </ul>
+                            <!-- social icons close -->
+                            <!-- <div class="topbar-text fright"> Opening Hours : Monday to Saturday - 8am to 9pm</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top bar close -->
+
+            <!-- Main header start -->
+            <div class="main-header md-hidden sm-hidden">
+                <div class="main-header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-wrap-table">
+                                    <div id="site-logo" class="site-logo col-media-left col-media-middle">
+                                        <a href="/">
+                                            <img class="logo-static img-fluid" style="max-width: 450px; max-height: 90px" src="/assets/kulkul_erp/costume/images/logo-white.png" alt="Blitzindo Utama">
+                                            <img class="logo-scroll img-fluid" style="max-width: 450px; max-height: 90px" src="/assets/kulkul_erp/costume/images/logo-white.png" alt="Blitzindo Utama">
+                                        </a>
+                                    </div>
+                                    <div class="col-media-body col-media-middle">
+                                        <!-- contact info -->
+                                        <ul class="info-list info_on_right_side fright">
+                                            <li>
+                                                <span>Address: <strong>Ruko Mega Glodok Kemayoran Blok E 18
+                                                    <br> Jl. Angkasa Kav. B6,
+                                                    <br> Kemayoran, Jakarta Pusat 10610</strong></span> </li>
+                                            <li>
+                                                <span>Call Us: <strong class="font-size18">+62 21 65868029</strong></span> </li>
+                                        </ul>
+                                        <!-- contact info close -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="header-mainnav">
+
+                                    <div class="main-navigation fright">
+                                        {% if not only_static %}
+                                        <ul id="primary-menu" class="menu">
+                                            {% if frappe.session.user != 'Guest' %}
+                                            <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)" style="padding-right: 15px;">{{ frappe.session.user }}</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item-1760"><a href="/app">{{ _('Switch To Desk') }}</a></li>
+                                                    <li class="menu-item-1791">
+                                                        <a class="dropdown-item" href="/track-order" rel="nofollow">Track Order</a>
+                                                    </li>
+                                                    {%- for child in post_login -%}
+                                                    {%- if child.url -%}
+                                                    <li class="menu-item-1791">
+                                                        <a class="dropdown-item" href="{{ child.url | abs_url }}"  {% if child.open_in_new_tab %} target="_blank" {% endif %} rel="nofollow">
+                                                            {{ child.label }}
+                                                        </a>
+                                                    </li>
+                                                    {%- endif -%}
+                                                    {%- endfor -%}
+                                                </ul>
+                                            </li>
+                                            {% endif %}
+
+                                            {% if not hide_login and frappe.session.user == 'Guest' %}
+                                                <li><a href="/login">{{ _("Register / Login") }}</a></li>
+                                            {% endif %}
+                                        </ul>
+                                        {% endif %}
+                                        <!-- {% if not only_static %}
+                                            {% if frappe.session.user != 'Guest' %}
+                                            <li class="nav-item dropdown logged-in" id="website-post-login" data-label="website-post-login">
+                                                <a href="#" class="nav-link nav-avatar" data-toggle="dropdown">
+                                                    <span class="user-image-wrapper"></span>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                    {%- for child in post_login -%}
+                                                    {%- if child.url -%}
+                                                    <a class="dropdown-item" href="{{ child.url | abs_url }}"  {% if child.open_in_new_tab %} target="_blank" {% endif %} rel="nofollow">
+                                                        {{ child.label }}
+                                                    </a>
+                                                    {%- endif -%}
+                                                    {%- endfor -%}
+                                                    <a class="dropdown-item switch-to-desk hidden" href="/app">{{ _('Switch To Desk') }}</a>
+                                                </ul>
+                                            </li>
+                                            {% endif %}
+
+                                            {% if not hide_login and frappe.session.user == 'Guest' %}
+                                            <li class="nav-item">
+                                                <a class="nav-link btn-login-area" href="/login">{{ _("Login") }}</a>
+                                            </li>
+                                            {% endif %}
+                                        {% endif %} -->
+                                    </div>
+                                    <div id="site-navigation" class="main-navigation fleft">
+                                        <ul id="primary-menu" class="menu">
+                                            <li><a href="/index">Home</a>
+                                            </li>
+                                            <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)">Services</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item-1791"><a href="/services/working-visa">Working Visa</a></li>
+                                                    <li class="menu-item-1758"><a href="/services/business-visa">Business Visa</a></li>
+                                                    <li class="menu-item-1790"><a href="/services/company-establishment">Company Establishment</a></li>
+                                                    <li class="menu-item-1760"><a href="/services/other-service">Other Service</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/blog">Blog</a></li>
+                                            <li><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- #site-navigation -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Main header close -->
+            <div class="header_mobile">
+                <div class="mlogo_wrapper clearfix">
+                    <div class="mobile_logo">
+                        <a href="#"><img src="/assets/kulkul_erp/costume/images/logo-white.png" class="img-fluid" style="max-width: 350px; max-height: 60px" alt="Blitzindo Utama"></a>
+                    </div>
+                    <div id="mmenu_toggle">
+                        <button></button>
+                    </div>
+                </div>
+                <div class="mmenu_wrapper">
+                    <div class="mobile_nav collapse">
+                        <ul id="menu-main-menu" class="mobile_mainmenu">
+                            <li class="current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor"><a href="/index">Home</a></li>
+                            <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)">Services</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item-1791"><a href="/services/working-visa">Working Visa</a></li>
+                                    <li class="menu-item-1758"><a href="/services/business-visa">Business Visa</a></li>
+                                    <li class="menu-item-1790"><a href="/services/company-establishment">Company Establishment</a></li>
+                                    <li class="menu-item-1760"><a href="/services/other-service">Other Service</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            {% if not only_static %}
+                                {% if frappe.session.user != 'Guest' %}
+                                <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="javascript:(0)" style="padding-right: 15px;">{{ frappe.session.user }}</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item-1760"><a href="/app">{{ _('Switch To Desk') }}</a></li>
+                                        <li class="menu-item-1791">
+                                            <a class="dropdown-item" href="/track-order">Track Order</a>
+                                        </li>
+                                        {%- for child in post_login -%}
+                                        {%- if child.url -%}
+                                        <li class="menu-item-1791">
+                                            <a href="{{ child.url | abs_url }}"  {% if child.open_in_new_tab %} target="_blank" {% endif %} rel="nofollow">
+                                                {{ child.label }}
+                                            </a>
+                                        </li>
+                                        {%- endif -%}
+                                        {%- endfor -%}
+                                    </ul>
+                                </li>
+                                {% endif %}
+
+                                {% if not hide_login and frappe.session.user == 'Guest' %}
+                                    <li><a href="/login">{{ _("Register / Login") }}</a></li>
+                                {% endif %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <!-- #site-header -->
+
+    {% block content %}{% endblock %}
+
+    <footer id="site-footer" class="site-footer bg-second">
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div id="media_image-1" class="widget widget_media_image">
+                            <a href="/index"><img src="/assets/kulkul_erp/costume/images/logo-white.png" class="img-fluid" style="max-width: 450px; max-height: 90px" alt=""></a>
+                        </div>
+                        <div id="custom_html-1" class="widget_text widget widget_custom_html">
+                            <div class="textwidget custom-html-widget">
+                                <p>Our teams are professional in providing service to our clients especially for foreigners in visa and other documents handling.</p>
+
+                            
+                                <div class="ot-socials bg-white">
+                                    <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                                    <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                                    <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a>
+                                    <a target="_blank" href="#" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-lg-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <section id="custom_html-2" class="widget_text widget widget_custom_html padding-left">
+                            <h4 class="widget-title">Services</h4>
+                            <div class="textwidget custom-html-widget">
+                                <ul class="padd-left">
+                                    <li><a href="/services/working-visa">Working Visa</a></li>
+                                    <li><a href="/services/business-visa">Business Visa</a></li>
+                                    <li><a href="/services/company-establishment">Company Establishment</a></li>
+                                    <li><a href="/services/other-service">Other Service</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- end col-lg-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <section id="custom_html-3" class="widget_text widget widget_custom_html padding-left">
+                            <h4 class="widget-title">Page</h4>
+                            <div class="textwidget custom-html-widget">
+                                <ul class="padd-left">
+                                    <li><a href="/index">Home</a></li>
+                                    <li><a href="blog">Blog</a></li>
+                                    <li><a href="contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- end col-lg-3 -->
+
+                </div>
+            </div>
+        </div>
+        <!-- .main-footer -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-copyright">
+                            © 2022 Finacial Consulting by <a target="_blank" href="#">Blitzindo Utama</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-nav text-right mobile-center">
+                            <ul id="footer-menu" class="none-style">
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .copyright-footer -->
+        <a id="back-to-top" href="#" class="show"></a>
+    </footer>
+    <!-- #site-footer -->
+</div>
+
+	<script type='text/javascript' src='/assets/kulkul_erp/costume/js/jquery.min.js'></script>
+	<script type='text/javascript' src='/assets/kulkul_erp/costume/js/countto.min.js'></script>
+	<script type='text/javascript' src='/assets/kulkul_erp/costume/js/jquery.isotope.min.js'></script>
+    <script type='text/javascript' src='/assets/kulkul_erp/costume/js/royal_preloader.min.js'></script>
+	<script type='text/javascript' src='/assets/kulkul_erp/costume/js/slick.min.js'></script>
+	<script type='text/javascript' src='/assets/kulkul_erp/costume/js/scripts.js'></script>
+	<script type='text/javascript' src='/assets/kulkul_erp/costume/js/header-footer.js'></script>
+
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <!-- RS5.0 Extensions Files -->
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="/assets/kulkul_erp/costume/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("#revolution-slider").revolution({
+                sliderType: "standard",
+                delay: 7500,
+                navigation: {
+                    arrows: { enable: true }
+                },
+                spinner: "off",
+                gridwidth: 1170,
+                gridheight: 700,
+                disableProgressBar: "on",
+                responsiveLevels:[1920,1229,991,480],gridwidth:[1170,970,750,450],gridheight:[700,700,700,700]
+            });
+        });
+    </script>
+</body>
+</html>

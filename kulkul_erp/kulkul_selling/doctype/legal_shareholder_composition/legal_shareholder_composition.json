@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-28 03:21:43.782220",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "section_break_2",
+  "name_nama",
+  "identity_card_ktp",
+  "taxpayer_identification_number",
+  "shares_percentage_persentase_saham",
+  "section_break_7",
+  "akta_pendirian__deed_of_establishment",
+  "akta_perubahan_change_of_deed",
+  "business_identity_card_nomor_induk_berusaha",
+  "company_taxpayer_identification_number__npwp_perusahaan",
+  "nama_direktur_director_name",
+  "director_identity_card_ktp_direktur",
+  "shares_percentage_persentase_saham_badan_hukum"
+ ],
+ "fields": [
+  {
+   "default": "Individu",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Individu\nBadan Hukum"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Individu'",
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_nama",
+   "fieldtype": "Data",
+   "label": "Name - Nama"
+  },
+  {
+   "fieldname": "identity_card_ktp",
+   "fieldtype": "Data",
+   "label": "Identity Card - KTP"
+  },
+  {
+   "fieldname": "taxpayer_identification_number",
+   "fieldtype": "Attach",
+   "label": "Taxpayer Identification Number (NPWP)"
+  },
+  {
+   "fieldname": "shares_percentage_persentase_saham",
+   "fieldtype": "Percent",
+   "label": "Shares Percentage - Persentase Saham"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Badan Hukum'",
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "akta_pendirian__deed_of_establishment",
+   "fieldtype": "Attach",
+   "label": "Akta Pendirian- Deed of Establishment"
+  },
+  {
+   "fieldname": "akta_perubahan_change_of_deed",
+   "fieldtype": "Attach",
+   "label": "Akta Perubahan - Change of Deed"
+  },
+  {
+   "fieldname": "business_identity_card_nomor_induk_berusaha",
+   "fieldtype": "Attach",
+   "label": "Business Identity Card - Nomor Induk Berusaha (NIB)"
+  },
+  {
+   "fieldname": "company_taxpayer_identification_number__npwp_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Company Taxpayer Identification Number -NPWP Perusahaan"
+  },
+  {
+   "fieldname": "nama_direktur_director_name",
+   "fieldtype": "Data",
+   "label": "Nama Direktur - Director Name"
+  },
+  {
+   "fieldname": "director_identity_card_ktp_direktur",
+   "fieldtype": "Attach",
+   "label": "Director Identity Card - KTP Direktur"
+  },
+  {
+   "description": "Max 100%",
+   "fieldname": "shares_percentage_persentase_saham_badan_hukum",
+   "fieldtype": "Percent",
+   "label": "Shares Percentage - Persentase Saham"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-04 00:20:35.524642",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Legal Shareholder Composition",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

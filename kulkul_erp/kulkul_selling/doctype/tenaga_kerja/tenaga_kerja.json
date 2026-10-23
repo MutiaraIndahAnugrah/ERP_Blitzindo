@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{full_name}-{no_passport}",
+ "creation": "2022-04-20 11:51:35.256840",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "full_name",
+  "nama_asing",
+  "tanggal_lahir",
+  "residential_address",
+  "notes",
+  "column_break_6",
+  "no_passport",
+  "passport_expired_date",
+  "passport_expired_status",
+  "document_passport",
+  "onshore_or_offshore",
+  "document_vaccine",
+  "company",
+  "sponsor_company",
+  "kewarganegaraan",
+  "address",
+  "contact_details_section",
+  "contact",
+  "mobile_no_whatsapp",
+  "column_break_14",
+  "we_chat",
+  "email"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "TKA-.#####\nTKI-.#####"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "nama_asing",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Foreign Name"
+  },
+  {
+   "fieldname": "no_passport",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "No Passport",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "kewarganegaraan",
+   "fieldtype": "Link",
+   "label": "Kewarganegaraan",
+   "options": "Country"
+  },
+  {
+   "fieldname": "tanggal_lahir",
+   "fieldtype": "Date",
+   "label": "Tanggal Lahir"
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fetch_from": "contact.wechat",
+   "fetch_if_empty": 1,
+   "fieldname": "we_chat",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "WeChat"
+  },
+  {
+   "fieldname": "mobile_no_whatsapp",
+   "fieldtype": "Data",
+   "label": "Mobile No (Whatsapp)"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_passport",
+   "fieldtype": "Attach",
+   "label": "Document Passport"
+  },
+  {
+   "fieldname": "document_vaccine",
+   "fieldtype": "Attach",
+   "label": "Document Vaccine"
+  },
+  {
+   "fieldname": "onshore_or_offshore",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Onshore / Offshore",
+   "options": "Onshore\nOffshore"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "passport_expired_date",
+   "fieldtype": "Date",
+   "label": "Passport Expired Date"
+  },
+  {
+   "fieldname": "passport_expired_status",
+   "fieldtype": "Data",
+   "label": "Passport Expired Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sponsor_company",
+   "fieldtype": "Link",
+   "label": "Sponsor Company",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "residential_address",
+   "fieldtype": "Data",
+   "label": "Residential Address"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Result Document",
+   "link_fieldname": "tka"
+  }
+ ],
+ "modified": "2022-07-08 14:12:40.076745",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Tenaga Kerja",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name,no_passport,company,kewarganegaraan",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "full_name"
+}

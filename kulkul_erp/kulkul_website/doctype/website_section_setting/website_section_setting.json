@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-05-24 09:33:12.498546",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_1_section",
+  "color_1",
+  "section_2_section",
+  "color_2",
+  "image_2",
+  "column_break_6",
+  "small_title_2",
+  "big_title_2",
+  "section_3_content_section",
+  "text_content_2",
+  "section_3_section",
+  "color_3",
+  "column_break_11",
+  "small_title_3",
+  "big_title_3",
+  "section_4_section",
+  "color_4",
+  "column_break_15",
+  "big_title_4",
+  "section_5_section",
+  "color_5",
+  "column_break_22",
+  "small_title_5",
+  "big_title_5"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_1_section",
+   "fieldtype": "Section Break",
+   "label": "Section 1"
+  },
+  {
+   "default": "#FFFFFF",
+   "fieldname": "color_1",
+   "fieldtype": "Color",
+   "in_list_view": 1,
+   "label": "Background Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_2_section",
+   "fieldtype": "Section Break",
+   "label": "Section 2"
+  },
+  {
+   "default": "#FFFFFF",
+   "fieldname": "color_2",
+   "fieldtype": "Color",
+   "label": "Background Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_3_section",
+   "fieldtype": "Section Break",
+   "label": "Section 3"
+  },
+  {
+   "default": "#E5EEF6",
+   "fieldname": "color_3",
+   "fieldtype": "Color",
+   "label": "Background Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_4_section",
+   "fieldtype": "Section Break",
+   "label": "Section 4"
+  },
+  {
+   "default": "#FFFFFF",
+   "fieldname": "color_4",
+   "fieldtype": "Color",
+   "label": "Background Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_5_section",
+   "fieldtype": "Section Break",
+   "label": "Section 5"
+  },
+  {
+   "fieldname": "small_title_2",
+   "fieldtype": "Data",
+   "label": "Small Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "big_title_2",
+   "fieldtype": "Data",
+   "label": "Big Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "text_content_2",
+   "fieldtype": "HTML Editor",
+   "label": "Content",
+   "reqd": 1,
+   "width": "100"
+  },
+  {
+   "description": "Ukuran Optimal Image : 590 x 550",
+   "fieldname": "image_2",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "reqd": 1
+  },
+  {
+   "fieldname": "small_title_3",
+   "fieldtype": "Data",
+   "label": "Small Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "big_title_3",
+   "fieldtype": "Data",
+   "label": "Big Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "big_title_4",
+   "fieldtype": "Data",
+   "label": "Big Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_3_content_section",
+   "fieldtype": "Section Break",
+   "label": "Section 2 Content"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "small_title_5",
+   "fieldtype": "Data",
+   "label": "Small Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "big_title_5",
+   "fieldtype": "Data",
+   "label": "Big Title",
+   "reqd": 1
+  },
+  {
+   "default": "#E5EEF6",
+   "fieldname": "color_5",
+   "fieldtype": "Color",
+   "label": "Background Color",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-05-24 21:26:47.945165",
+ "modified_by": "Administrator",
+ "module": "Kulkul Website",
+ "name": "Website Section Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

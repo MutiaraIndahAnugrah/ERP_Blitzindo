@@ -1,0 +1,295 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-04 00:43:46.957750",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "list_kode_subklasifikasi",
+  "lgl_sburo_article_of_association_of_mother_company",
+  "lgl_sburo_business_license_of_mother_company",
+  "lgl_sburo_letter_of_appointment_chief_representative",
+  "lgl_sburo_power_of_attorney",
+  "lgl_sburo_letter_of_intent",
+  "lgl_sburo_statement_letter_stating_no_position_at_another",
+  "column_break_8",
+  "lgl_sburo_statement_letter_of_validity_and_aunthenticity",
+  "lgl_sburo_contract",
+  "lgl_sburo_certificate_for_completion_acceptance",
+  "lgl_sburo_2020_financial_report",
+  "lgl_sburo_2021_financial_report",
+  "lgl_sburo_representative_office_tax_card",
+  "lgl_sburo_representative_office_nib",
+  "section_break_16",
+  "lgl_sburo_embassy_recommendation_letter_issued_by_the",
+  "lgl_sburo_statement_letter_from_the_buiding_management",
+  "lgl_sburo_association_member_",
+  "lgl_sburo_passport_of_chief_representative",
+  "lgl_sburo_tax_card_of_chief_representative",
+  "lgl_sburo_curiculum_vitae_cv_of_chief",
+  "lgl_sburo_itas_of_chief_representative",
+  "column_break_24",
+  "lgl_sburo_statement_letter_of_chief_representative",
+  "lgl_sburo_2020_balance_sheet_",
+  "lgl_sburo_2021_balance_sheet",
+  "lgl_sburo_skk_sertifikat_keahlian_konstruksi",
+  "lgl_sburo_iso_37001_kan_acreditation",
+  "lgl_sburo_iso_9001_kan_acrediatation",
+  "lgl_sburo_heavy_equipment_data",
+  "lgl_sburo_proof_of_ownership",
+  "lgl_sburo_function_eligible_certificate",
+  "column_break_34",
+  "lgl_sburo_front_view_photo",
+  "lgl_sburo_back_view_photo",
+  "lgl_sburo_left_view_photo",
+  "lgl_sburo_right_view_photo",
+  "section_break_35",
+  "lgl_sburo_chief_representative_photo",
+  "lgl_sburo_company_letter_head",
+  "lgl_sburo_company_stamp",
+  "lgl_sburo_chief_representative_signature",
+  "column_break_43",
+  "lgl_sburo_oss_username",
+  "lgl_sburo_oss_password"
+ ],
+ "fields": [
+  {
+   "fieldname": "list_kode_subklasifikasi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "List Kode Subklasifikasi",
+   "options": "Detail Order Jenis SBU",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lgl_sburo_article_of_association_of_mother_company",
+   "fieldtype": "Attach",
+   "label": "Article of Association of Mother Company"
+  },
+  {
+   "fieldname": "lgl_sburo_business_license_of_mother_company",
+   "fieldtype": "Attach",
+   "label": "Business License of Mother Company"
+  },
+  {
+   "fieldname": "lgl_sburo_letter_of_appointment_chief_representative",
+   "fieldtype": "Attach",
+   "label": "Letter of Appointment Chief Representative "
+  },
+  {
+   "fieldname": "lgl_sburo_power_of_attorney",
+   "fieldtype": "Attach",
+   "label": "Power of Attorney"
+  },
+  {
+   "fieldname": "lgl_sburo_letter_of_intent",
+   "fieldtype": "Attach",
+   "label": "Letter of Intent"
+  },
+  {
+   "fieldname": "lgl_sburo_statement_letter_stating_no_position_at_another",
+   "fieldtype": "Attach",
+   "label": "Statement Letter Stating No Position at Another Business Entities"
+  },
+  {
+   "fieldname": "lgl_sburo_statement_letter_of_validity_and_aunthenticity",
+   "fieldtype": "Attach",
+   "label": "Statement Letter of Validity and Aunthenticity of Documents"
+  },
+  {
+   "fieldname": "lgl_sburo_contract",
+   "fieldtype": "Attach",
+   "label": "Contract"
+  },
+  {
+   "fieldname": "lgl_sburo_certificate_for_completion_acceptance",
+   "fieldtype": "Attach",
+   "label": "Certificate for Completion Acceptance"
+  },
+  {
+   "fieldname": "lgl_sburo_2020_financial_report",
+   "fieldtype": "Attach",
+   "label": "2020 Financial Report and has been audited by Certified Public Accountants"
+  },
+  {
+   "fieldname": "lgl_sburo_2021_financial_report",
+   "fieldtype": "Data",
+   "label": "2021 Financial Report and has been audited by Certified Public Accountants"
+  },
+  {
+   "fieldname": "lgl_sburo_representative_office_tax_card",
+   "fieldtype": "Attach",
+   "label": "Representative Office Tax Card"
+  },
+  {
+   "fieldname": "lgl_sburo_representative_office_nib",
+   "fieldtype": "Attach",
+   "label": "Representative Office NIB"
+  },
+  {
+   "fieldname": "lgl_sburo_embassy_recommendation_letter_issued_by_the",
+   "fieldtype": "Attach",
+   "label": "Embassy Recommendation Letter Issued by the Embassy of The People's of Republic of China in Indonesia"
+  },
+  {
+   "fieldname": "lgl_sburo_statement_letter_from_the_buiding_management",
+   "fieldtype": "Attach",
+   "label": "Statement Letter from the buiding management"
+  },
+  {
+   "fieldname": "lgl_sburo_association_member_",
+   "fieldtype": "Attach",
+   "label": "Association Member "
+  },
+  {
+   "fieldname": "lgl_sburo_passport_of_chief_representative",
+   "fieldtype": "Attach",
+   "label": "Passport of Chief Representative"
+  },
+  {
+   "fieldname": "lgl_sburo_tax_card_of_chief_representative",
+   "fieldtype": "Attach",
+   "label": "Tax card of Chief Representative"
+  },
+  {
+   "fieldname": "lgl_sburo_curiculum_vitae_cv_of_chief",
+   "fieldtype": "Attach",
+   "label": "Curiculum Vitae (CV) of Chief Representative in English"
+  },
+  {
+   "fieldname": "lgl_sburo_itas_of_chief_representative",
+   "fieldtype": "Attach",
+   "label": "ITAS of Chief Representative"
+  },
+  {
+   "fieldname": "lgl_sburo_statement_letter_of_chief_representative",
+   "fieldtype": "Attach",
+   "label": "Statement Letter of Chief Representative"
+  },
+  {
+   "fieldname": "lgl_sburo_2020_balance_sheet_",
+   "fieldtype": "Attach",
+   "label": "2020 Balance Sheet "
+  },
+  {
+   "fieldname": "lgl_sburo_2021_balance_sheet",
+   "fieldtype": "Attach",
+   "label": "2021 Balance Sheet"
+  },
+  {
+   "fieldname": "lgl_sburo_skk_sertifikat_keahlian_konstruksi",
+   "fieldtype": "Attach",
+   "label": "SKK (Sertifikat Keahlian Konstruksi)"
+  },
+  {
+   "fieldname": "lgl_sburo_iso_37001_kan_acreditation",
+   "fieldtype": "Attach",
+   "label": "ISO 37001 KAN Acreditation"
+  },
+  {
+   "fieldname": "lgl_sburo_iso_9001_kan_acrediatation",
+   "fieldtype": "Attach",
+   "label": "ISO 9001 KAN Acrediatation"
+  },
+  {
+   "fieldname": "lgl_sburo_heavy_equipment_data",
+   "fieldtype": "Section Break",
+   "label": "Heavy Equipment Data"
+  },
+  {
+   "fieldname": "lgl_sburo_proof_of_ownership",
+   "fieldtype": "Attach",
+   "label": "Proof of ownership"
+  },
+  {
+   "fieldname": "lgl_sburo_function_eligible_certificate",
+   "fieldtype": "Attach",
+   "label": "Function Eligible Certificate"
+  },
+  {
+   "fieldname": "lgl_sburo_front_view_photo",
+   "fieldtype": "Attach",
+   "label": "Front View Photo"
+  },
+  {
+   "fieldname": "lgl_sburo_back_view_photo",
+   "fieldtype": "Attach",
+   "label": "Back View Photo"
+  },
+  {
+   "fieldname": "lgl_sburo_left_view_photo",
+   "fieldtype": "Attach",
+   "label": "Left View Photo"
+  },
+  {
+   "fieldname": "lgl_sburo_right_view_photo",
+   "fieldtype": "Attach",
+   "label": "Right View Photo"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lgl_sburo_chief_representative_photo",
+   "fieldtype": "Attach",
+   "label": "Chief Representative Photo 3x4"
+  },
+  {
+   "fieldname": "lgl_sburo_company_letter_head",
+   "fieldtype": "Attach",
+   "label": "Company Letter Head"
+  },
+  {
+   "fieldname": "lgl_sburo_company_stamp",
+   "fieldtype": "Attach",
+   "label": "Company Stamp"
+  },
+  {
+   "fieldname": "lgl_sburo_chief_representative_signature",
+   "fieldtype": "Attach",
+   "label": "Chief Representative Signature"
+  },
+  {
+   "fieldname": "lgl_sburo_oss_username",
+   "fieldtype": "Data",
+   "label": "OSS username"
+  },
+  {
+   "fieldname": "lgl_sburo_oss_password",
+   "fieldtype": "Data",
+   "label": "OSS Password"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-04 01:06:39.018425",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "LGL SBURO Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

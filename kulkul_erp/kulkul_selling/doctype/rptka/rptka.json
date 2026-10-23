@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nomor_rptka",
+ "creation": "2022-04-20 21:31:15.300308",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "nomor_rptka",
+  "column_break_4",
+  "tanggal_terbit",
+  "tanggal_expired",
+  "jumlah_rptka",
+  "rptka_terpakai",
+  "keterangan",
+  "data_jabatan_rptka_section",
+  "data_jabatan_rptka",
+  "data_pengguna_rptka_section",
+  "data_pengguna_rptka"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Read Only",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "nomor_rptka",
+   "fieldtype": "Data",
+   "label": "Nomor RPTKA",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "tanggal_terbit",
+   "fieldtype": "Date",
+   "label": "Tanggal Terbit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_expired",
+   "fieldtype": "Date",
+   "label": "Tanggal Expired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jumlah_rptka",
+   "fieldtype": "Int",
+   "label": "Jumlah RPTKA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rptka_terpakai",
+   "fieldtype": "Int",
+   "label": "RPTKA Terpakai",
+   "read_only": 1
+  },
+  {
+   "fieldname": "keterangan",
+   "fieldtype": "Data",
+   "label": "Keterangan"
+  },
+  {
+   "fieldname": "data_jabatan_rptka_section",
+   "fieldtype": "Section Break",
+   "label": "Data Jabatan RPTKA"
+  },
+  {
+   "fieldname": "data_jabatan_rptka",
+   "fieldtype": "Table",
+   "no_copy": 1,
+   "options": "Data Jabatan RPTKA"
+  },
+  {
+   "fieldname": "data_pengguna_rptka_section",
+   "fieldtype": "Section Break",
+   "label": "Data Pengguna RPTKA"
+  },
+  {
+   "fieldname": "data_pengguna_rptka",
+   "fieldtype": "Table",
+   "no_copy": 1,
+   "options": "Data Pengguna RPTKA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-22 14:32:06.164543",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "RPTKA",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "nomor_rptka,customer,customer_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

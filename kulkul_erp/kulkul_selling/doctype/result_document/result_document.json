@@ -1,0 +1,357 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-04-20 21:13:42.499752",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "wo_company",
+  "status",
+  "type",
+  "visa_type",
+  "visa",
+  "tka",
+  "tka_full_name",
+  "customer_tka",
+  "no_passport",
+  "issue_date",
+  "status_expired",
+  "expired_date",
+  "status_chart_expired",
+  "result_document",
+  "column_break_12",
+  "rptka",
+  "customer_name",
+  "no_rptka",
+  "customer",
+  "jabatan_rptka",
+  "notes",
+  "section_break_20",
+  "no_evisa",
+  "evisa_issued",
+  "evisa_expired",
+  "evisa_document",
+  "section_break_15",
+  "no_notifikasi",
+  "notifikasi_issued",
+  "notifikasi_expired",
+  "notifikasi_document",
+  "kitas_section",
+  "no_kitas",
+  "kitas_issued",
+  "kitas_expired",
+  "kitas_document",
+  "section_break_18",
+  "work_orders",
+  "work_order_detail",
+  "amended_from",
+  "jabatan_rptka_before",
+  "downloadable"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Visa\nLegal"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Visa\"",
+   "fieldname": "visa_type",
+   "fieldtype": "Select",
+   "label": "Visa Type",
+   "options": "Visa\nRPTKA"
+  },
+  {
+   "depends_on": "eval:doc.visa_type!=\"RPTKA\"",
+   "fieldname": "tka",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "TKA",
+   "options": "Tenaga Kerja"
+  },
+  {
+   "fetch_from": "tka.no_passport",
+   "fieldname": "no_passport",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No Passport",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issue Date"
+  },
+  {
+   "columns": 2,
+   "fieldname": "expired_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expired Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "result_document",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Document"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Visa\"",
+   "fieldname": "visa",
+   "fieldtype": "Link",
+   "label": "Visa",
+   "options": "Visa"
+  },
+  {
+   "fieldname": "rptka",
+   "fieldtype": "Link",
+   "label": "RPTKA",
+   "options": "RPTKA"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_kitas",
+   "fieldtype": "Data",
+   "label": "No KITAS"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Visa\"",
+   "fieldname": "no_notifikasi",
+   "fieldtype": "Data",
+   "label": "No Notifikasi"
+  },
+  {
+   "fieldname": "no_evisa",
+   "fieldtype": "Data",
+   "label": "No EVISA"
+  },
+  {
+   "fieldname": "jabatan_rptka",
+   "fieldtype": "Link",
+   "label": "Jabatan RPTKA",
+   "options": "Jabatan RPTKA"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Result Document",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "rptka.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "RPTKA Company Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.visa_type==\"RPTKA\"",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "RPTKA Customer",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "eval:doc.visa_type==\"RPTKA\"",
+   "fieldname": "no_rptka",
+   "fieldtype": "Data",
+   "label": "No RPTKA"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "depends_on": "eval:doc.visa_type!=\"RPTKA\"",
+   "fetch_from": "tka.full_name",
+   "fieldname": "tka_full_name",
+   "fieldtype": "Data",
+   "label": "TKA Full Name"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.visa_type==\"Visa\"",
+   "fieldname": "kitas_section",
+   "fieldtype": "Section Break",
+   "label": "KITAS"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "kitas_issued",
+   "fieldtype": "Date",
+   "label": "Kitas Issued"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "kitas_expired",
+   "fieldtype": "Date",
+   "label": "KITAS Expired"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "kitas_document",
+   "fieldtype": "Attach",
+   "label": "KITAS Document"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.visa_type==\"Visa\"",
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Notifikasi"
+  },
+  {
+   "fieldname": "notifikasi_issued",
+   "fieldtype": "Date",
+   "label": "Notifikasi Issued"
+  },
+  {
+   "fieldname": "notifikasi_expired",
+   "fieldtype": "Date",
+   "label": "Notifikasi Expired"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "notifikasi_document",
+   "fieldtype": "Attach",
+   "label": "Notifikasi Document"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.visa_type==\"Visa\"",
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "E-VISA"
+  },
+  {
+   "fieldname": "evisa_issued",
+   "fieldtype": "Date",
+   "label": "EVISA Issued"
+  },
+  {
+   "fieldname": "evisa_expired",
+   "fieldtype": "Date",
+   "label": "EVISA Expired"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "evisa_document",
+   "fieldtype": "Attach",
+   "label": "EVISA Document"
+  },
+  {
+   "fieldname": "work_order_detail",
+   "fieldtype": "Data",
+   "label": "Work Order Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_orders",
+   "fieldtype": "Link",
+   "label": "Work Orders",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Legal'",
+   "fetch_from": "tka.company",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_tka",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only_depends_on": "eval:doc.type == 'Visa'"
+  },
+  {
+   "default": "In-Progress",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "In-Progress\nCompleted"
+  },
+  {
+   "fieldname": "wo_company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "status_expired",
+   "fieldtype": "Data",
+   "label": "Status Issue Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jabatan_rptka_before",
+   "fieldtype": "Data",
+   "label": "Jabatan RPTKA Before",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_chart_expired",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Expired Date",
+   "options": "Expired in 3 Days\nExpired in 1 Week\nExpired in 2 Weeks\nExpired in 1 Month\nExpired in 3 Months",
+   "read_only": 1
+  },
+  {
+   "fieldname": "downloadable",
+   "fieldtype": "Link",
+   "label": "Downloadable",
+   "options": "Kulkul Downloadable",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-07-03 00:44:20.918198",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Result Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

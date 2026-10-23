@@ -1,0 +1,8 @@
+.btn-xs, .btn-secondary .grid-add-row{
+	border : solid 2px var(--primary)!important;
+}
+
+.btn-xs, .btn-default .input-sm {
+	border: solid 2px var(--primary)!important;
+
+}

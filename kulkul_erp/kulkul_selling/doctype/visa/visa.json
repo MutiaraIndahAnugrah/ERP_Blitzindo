@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nama_visa",
+ "creation": "2022-04-24 21:50:25.444195",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nama_visa",
+  "status_rptka",
+  "syarat_visa_sebelumnya"
+ ],
+ "fields": [
+  {
+   "fieldname": "nama_visa",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Visa",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status_rptka",
+   "fieldtype": "Select",
+   "label": "Status RPTKA",
+   "options": "Non-Aktif\nAktif"
+  },
+  {
+   "fieldname": "syarat_visa_sebelumnya",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Syarat Visa Sebelumnya",
+   "options": "Tidak ada syarat\nKITAS 312 Baru 1\nKITAS 312 EXTEND 1\nKITAS 312 EXTEND 2\nKITAS 312 EXTEND 3\nKITAS 312 EXTEND 4\nKITAS 312 EXTEND 5\nKITAS 312 EXTEND 6"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-24 21:50:25.444195",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Visa",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

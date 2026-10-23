@@ -1,0 +1,44 @@
+# Python / packaging
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.swp
+.venv/
+venv/
+env/
+build/
+dist/
+
+# Local editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets and site runtime
+.env
+.env.*
+!.env.example
+site_config.json
+common_site_config.json
+sites/
+logs/
+backups/
+private/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Database and private invoice artifacts
+*.sql
+*.sql.gz
+*.sqlite*
+*.pdf
+previews/
+outputs/
+work/
+
+# Local scratch files
+nginx.conf-backup
+kulkul_erp/docs/current

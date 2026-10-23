@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "",
+ "creation": "2022-07-25 21:17:14.416850",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Reserve Order",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Reserve Order {{ doc.name }} (Visa) has been approved.",
+ "modified": "2022-07-25 22:15:44.666980",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Reserver Order (Visa) Approved",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "",
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Reserve Order {{ doc.name }} (Visa) Approved",
+ "value_changed": "workflow_state"
+}

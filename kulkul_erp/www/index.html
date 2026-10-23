@@ -1,0 +1,406 @@
+{% extends "www/base.html" %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <style>
+        .thumb-post img {
+        object-fit: none; /* Do not scale the image */
+        object-position: center; /* Center the image within the element */
+        width: 505px !important;
+        max-height: 465px !important;
+        margin-bottom: 1rem;
+    }
+    .section-contact-us {
+        background-image: url(assets/kulkul_erp/images/bg-home-contact-us.jpg) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+    </style>
+    <div id="content" class="site-content">
+        <section id="section-slider" class="fullwidthbanner-container" aria-label="section-slider">
+            <div id="revolution-slider">
+                <ul>
+                    {% if slider_top %}
+                        {% for s_top in slider_top %}
+                        <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                            <img src="{{ s_top.image }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                            {% if s_top.sub_image %}
+                            <div class="tp-caption tp-resizeme" data-x="right" data-hoffset="['0']" data-y="bottom" data-voffset="" data-width="['auto','320','auto','320']" data-transform_idle="o:1;" data-transform_in="x:550px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-responsive_offset="on">
+                                <img class="img-responsive md-hidden sm-hidden xs-hidden thumb-post" 
+                                {% if s_top.sub_image_size == 'Crop Center' %}
+                                    style="object-fit: none;
+                                    object-position: center;
+                                    max-width: 505px !important;
+                                    max-height: 465px !important;"
+                                {% else %}
+                                    style="max-width: 505px !important;
+                                    max-height: 465px !important;"
+                                {% endif %}
+                                src="{{ s_top.sub_image }}" alt="Image {{ s_top.title }}">
+                            </div>
+                            {% endif %}
+                            
+                            {% if s_top.banner_title %}
+                            <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['-45','-45','-45','-45']" data-width="['670','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1700" data-whitespace="['normal']" data-fontsize="['50','50','40','30']" data-lineheight="['60','60','50','40']" data-responsive_offset="on">
+                                <p style="font-size: {{ s_top.banner_title_font_size if s_top.banner_title_font_size else 50 }}px !important;color: {{ s_top.banner_title_color }};">{{ s_top.banner_title }}</p>
+                            </div>
+                            {% endif %}
+
+                            {% if s_top.banner_sub_title %}
+                            <div class="tp-caption tp-resizeme sh3" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['60','60','60','60']" data-width="['580','580','480','300']" data-transform_idle="o:1;" data-whitespace="['normal','normal','normal','normal']" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1900" data-fontsize="['16','16','14','12']" data-lineheight="['24','24','18','16']" data-responsive_offset="on">
+                                <p style="font-size: {{ s_top.banner_sub_title_font_size if s_top.banner_sub_title_font_size else 16 }}px !important;padding-top: {{ s_top.distance_title_and_sub_title if s_top.distance_title_and_sub_title else 30 }}px; text-align: justify; color: {{ s_top.banner_sub_title_color }};">{{ s_top.banner_sub_title }}</p>
+                            </div>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% else %}
+                    <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                        <!--  BACKGROUND IMAGE -->
+                        <img src="https://via.placeholder.com/1920x700" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                        <div class="tp-caption tp-resizeme" data-x="right" data-hoffset="['0']" data-y="bottom" data-voffset="" data-width="['auto','320','auto','320']" data-transform_idle="o:1;" data-transform_in="x:550px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-responsive_offset="on">
+                            <img class="img-responsive md-hidden sm-hidden xs-hidden" src="https://via.placeholder.com/505x465/000000" alt="Image">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['-45','-45','-45','-45']" data-width="['670','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1700" data-whitespace="['normal']" data-fontsize="['50','50','40','30']" data-lineheight="['60','60','50','40']" data-responsive_offset="on">
+                            <p>PT. BLITZINDO UTAMA</p>
+                        </div>
+                        <div class="tp-caption tp-resizeme sh3" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['60','60','60','60']" data-width="['580','580','480','300']" data-transform_idle="o:1;" data-whitespace="['normal','normal','normal','normal']" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1900" data-fontsize="['16','16','14','12']" data-lineheight="['24','24','18','16']" data-responsive_offset="on">
+                            <p style="padding-top: 30px; text-align: justify;">PT. BLITZINDO UTAMA is a service company which based in Jakarta, Indonesia. Our teams are professional in providing service to our clients especially for foreigners in visa and other documents handling. We are A+ services company which has specialized in visa and legal documents handling for more than 9 years experience. </p>
+                        </div>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </section>
+
+        <section class="wpb_row row-fluid top-70 row-has-fill relative" style="background-color: {{ section_setting.color_1 }} !important;">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="empty_space_70 lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic ">
+                                    {% if card_top.card_1_icon  %}
+                                        <i class="ion-md-{{ card_top.card_1_icon }} ion-ios-{{ card_top.card_1_icon }} ion-logo-{{ card_top.card_1_icon }} ion-ios-{{ card_top.card_1_icon }}"></i>
+                                    {% else  %}
+                                        <i class="ion-md-medal ion-ios-medal ion-logo-medal ion-ios-medal"></i>
+                                    {% endif %}
+                                    <div class="content-box">
+                                        <h4>{{ card_top.card_1_title }}</h4>
+                                        <p>{{ card_top.card_1_content }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="empty_space_30  lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic">
+                                    {% if card_top.card_2_icon  %}
+                                        <i class="ion-md-{{ card_top.card_2_icon }} ion-ios-{{ card_top.card_2_icon }} ion-logo-{{ card_top.card_2_icon }} ion-ios-{{ card_top.card_2_icon }}"></i>
+                                    {% else  %}
+                                        <i class="ion-md-bulb ion-ios-bulb ion-logo-bulb ion-ios-bulb"></i>
+                                    {% endif %}
+                                    <div class="content-box">
+                                        <h4>{{ card_top.card_2_title }}</h4>
+                                        <p>{{ card_top.card_2_content }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="empty_space_30 lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic">
+                                    {% if card_top.card_3_icon  %}
+                                        <i class="ion-md-{{ card_top.card_3_icon }} ion-ios-{{ card_top.card_3_icon }} ion-logo-{{ card_top.card_3_icon }} ion-ios-{{ card_top.card_3_icon }}"></i>
+                                    {% else  %}
+                                        <i class="ion-md-cash ion-ios-cash ion-logo-cash ion-ios-cash"></i>
+                                    {% endif %}
+                                    <div class="content-box">
+                                         <h4>{{ card_top.card_3_title }}</h4>
+                                        <p>{{ card_top.card_3_content }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="empty_space_30 lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic">
+                                    {% if card_top.card_4_icon  %}
+                                        <i class="ion-md-{{ card_top.card_4_icon }} ion-ios-{{ card_top.card_4_icon }} ion-logo-{{ card_top.card_4_icon }} ion-ios-{{ card_top.card_4_icon }}"></i>
+                                    {% else  %}
+                                        <i class="ion-md-headset ion-ios-headset ion-logo-headset ion-ios-headset"></i>
+                                    {% endif %}
+                                    <div class="content-box">
+                                         <h4>{{ card_top.card_4_title }}</h4>
+                                        <p>{{ card_top.card_4_content }}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wpb_row row-fluid section-padd row-has-fill row-o-equal-height row-o-content-middle row-flex" style="background-color: {{ section_setting.color_2 }} !important;">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="row wpb_row inner row-fluid row-o-equal-height row-o-content-middle row-flex">
+                                    <div class="wpb_column column_container col-sm-12 col-md-8 col-has-fill custom-padd-1" 
+                                    style="background: url('{{ section_setting.image_2 }}') no-repeat center; background-size: cover;">
+                                        <div class="column-inner">
+                                            <div class="wpb_wrapper"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-second wpb_column column_container col-sm-12 col-md-4">
+                                        <div class="column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="empty_space_60 lg-hidden h60"><span class="empty_space_inner"></span></div>
+
+                                                <div class="section-head padding-box-2 text-light">
+                                                    <h6 style="padding-top: 40px;"><span>{{ section_setting.small_title_2 }}</span></h6>
+                                                    <h2 class="section-title">{{ section_setting.big_title_2 }}</h2>
+                                                </div>
+
+                                                {{ section_setting.text_content_2 }}
+
+                                                <div class="empty_space_60 lg-hidden"><span class="empty_space_inner"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wpb_row row-fluid section-padd" style="background-color: {{ section_setting.color_3 }};">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12 col-md-9">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="section-head ">
+                                    <h6><span>{{ section_setting.small_title_3 }}</span></h6>
+                                    <h2 class="section-title">{{ section_setting.big_title_3 }}</h2>
+                                </div>
+
+                                <div class="empty_space_30 md-hidden sm-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-4">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box ionic hover-box">
+                                    <i class="ion-md-{{ card_working_visa.thumbnail_icon if card_working_visa.thumbnail_icon else 'umbrella' }} ion-logo-{{ card_working_visa.thumbnail_icon if card_working_visa.thumbnail_icon else 'umbrella' }}"></i>
+                                    <div class="content-box">
+                                        <h4>Working Visa</h4>
+                                        <p>{{ card_working_visa.content_thumbnail }}</p>
+                                        <a class="link-box pagelink" href="/services/working-visa" target="_self">Read more</a> 
+                                    </div>
+                                </div>
+                                <div class="empty_space_30"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-4">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box ionic hover-box">
+                                    <i class="ion-md-{{ card_business_visa.thumbnail_icon if card_business_visa.thumbnail_icon else 'cube' }} ion-logo-{{ card_business_visa.thumbnail_icon if card_business_visa.thumbnail_icon else 'cube' }}"></i>
+                                    <div class="content-box">
+                                        <h4>Business Visa</h4>
+                                        <p>{{ card_business_visa.content_thumbnail }}</p>
+                                        <a class="link-box pagelink" href="/services/business-visa" target="_self">Read more</a> </div>
+                                </div>
+
+                                <div class="empty_space_30"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-4">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box  ionic  hover-box">
+                                    <i class="ion-md-{{ card_company_establishment.thumbnail_icon if card_company_establishment.thumbnail_icon else 'podium' }} ion-logo-{{ card_company_establishment.thumbnail_icon if card_company_establishment.thumbnail_icon else 'podium' }}"></i>
+                                    <div class="content-box">
+                                        <h4>Company Establishment</h4>
+                                        <p>{{ card_company_establishment.content_thumbnail }}</p>
+                                        <a class="link-box pagelink" href="/services/company-establishment" target="_self">Read more</a> </div>
+                                </div>
+
+                                <div class="empty_space_30"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% if slider_bottom %}
+            <section class="wpb_row row-fluid section-padd-top" style="background-color: {{ section_setting.color_4 }};">
+                <div class="container">
+                    <div class="row">
+                        <div class="wpb_column column_container col-sm-12 col-md-9">
+                            <div class="column-inner">
+                                <div class="wpb_wrapper">
+                                    <div class="section-head ">
+                                        <h2 class="section-title">{{ section_setting.big_title_4 }}</h2>
+                                    </div>
+
+                                    <div class="empty_space_30 md-hidden sm-hidden"><span class="empty_space_inner"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="wpb_row row-fluid section-padd-bot row-has-fill row-full-width row-no-padding" style="background-color: {{ section_setting.color_4 }};">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="project-list-2">
+                                    <div class="project-slider-2 projects" data-show="1" data-auto="" data-dot="true">
+                                        {% for s_bottom in slider_bottom %}
+                                            <div class="col-md-12">
+                                                <div class="project-item">
+
+                                                    <div class="slide-img"><img src="{{ s_bottom.image }}" alt="Image {{ s_bottom.title }}"></div>
+
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% if slider_bottom|length > 1 %}
+                                        <div class="container">
+                                            <div class="arrows-slick" style="margin-top: 150px;">
+                                                <button type="button" class="btn-left slick-arrow prev-nav"><i class="fa fa-angle-left"></i></button>
+                                                <button type="button" class="btn-right slick-arrow next-nav"><i class="fa fa-angle-right"></i></button>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        <!-- <section class="wpb_row row-fluid section-padd bg-second row-has-fill section-contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-6">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <h2 class="custom_heading text-light">Request a Free<br>Call Back</h2>
+                                <div class="wpb_text_column wpb_content_element  text-light">
+                                    <div class="wpb_wrapper">
+                                        <p>Provide discussion information and we’ll get back to
+                                            <br> you as soon as possible</p>
+                                            <a href="/contact" class="wpcf7-form-control btn">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div role="form" class="wpcf7" id="wpcf7-f1626-p1530-o1" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response"></div>
+                                    <form action="" method="post" class="wpcf7-form">
+                                        <p>
+                                            
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="wpb_row row-fluid section-padd" style="background-color: {{ section_setting.color_5 }};">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="section-head ">
+                                    <h6><span>{{ section_setting.small_title_5 }}</span></h6>
+                                    <h2 class="section-title">{{ section_setting.big_title_5 }}</h2>
+                                </div>
+
+                                <div class="empty_space_30"><span class="empty_space_inner"></span></div>
+
+                                <div class="testi-slider" data-show="3" data-arrow="true">
+                                    {% for testimonial in testimonials %}
+                                    <div>
+                                        <div class="testi-item box-shadow-hover">
+                                            <div class="testi-head" style="height: 130px;">
+                                                {% if testimonial.customer_company_logo %}
+                                                <img width="50" height="50" src="{{ testimonial.customer_company_logo }}" class="client-img" alt="Testimonial From {{ testimonial.customer_name }} - {{ testimonial.customer_company_name }}">
+                                                {% endif %}
+                                                <h5>{{ testimonial.customer_name }}<span class="font12 normal">{{ testimonial.customer_company_name }}</span></h5>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="testi-content" style="min-height: 250px;">
+                                                <i class="ion-md-quote"></i>
+                                                <p>{{ testimonial.reviews }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+
+                                <div class="empty_space_80"><span class="empty_space_inner"></span></div>
+
+                                <div class="partner-slider image-carousel text-center" data-show="5" data-arrow="true">
+                                    {% for t_client in testimonial_clients %}
+                                    <div>
+                                        <div class="partner-item text-center clearfix">
+                                            <div class="inner">
+                                                <div class="thumb">
+                                                    <img width="150" height="150" src="{{ t_client.company_logo }}" alt="Clients {{ t_client.company_name }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+{% endblock %}

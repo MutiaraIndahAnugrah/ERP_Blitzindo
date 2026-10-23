@@ -1,0 +1,153 @@
+{% extends "www/base.html" %}
+{% block title %}Track Order{% endblock %}
+
+{% block content %}
+<div id="content" class="site-content">
+    <div class="entry-content">
+        <div class="container">
+            <div class="row">
+
+                <div id="primary" class="widget-area primary-sidebar col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>Tracking Orders</h3>
+                    <section id="search-2" class="widget widget_search">
+                        <form role="search" method="get" id="search-form" class="search-form" action="">
+                            <input type="search" class="search-field" placeholder="Enter Order ID, Name or Passport Number" value="{{ request_get | d('', true) }}" name="s">
+                            <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </section>
+                    {% if request_get and request_get != '' and wo and is_single %}
+                        <section id="recent_news-1" class="widget widget_recent_news">
+                            Order Number : <strong>{{ wo.name }}</strong>
+                            <br>
+                            Order Date : <strong>{{ frappe.utils.formatdate(wo.creation, "dd-MM-yyyy") }}</strong>
+                            <br>
+                            Status : 
+                            <span class="{{ color_status }}">
+                                <b>{{ wo.status or '-' }}</b>
+                            </span>
+                            <hr>
+                            {% if wo.order_type == 'Visa' %}
+                                <ul class="recent-news clearfix mt-5" style="margin-top: 20px;">
+                                    {% for ord in wo.order_items %}
+                                    <li class="clearfix">
+                                        <div class="entry-header">
+                                            Order Item #{{ loop.index }} : <b>{{ ord.item_name }}</b>
+                                            <br>
+                                            <br>
+                                            {% set detail_order = frappe.get_doc('Detail Order',ord.detail_order) %}
+                                            {% for detail in detail_order.details %}
+                                                <span class="post-on">
+                                                    <span class="" style="font-size: 13px;">
+                                                        <b>{{ detail.data_tka }}</b>
+                                                        <br>
+                                                        {{ detail.status }}
+                                                    </span>
+                                                </span>
+                                                <br>
+                                            {% endfor %}
+                                        </div>
+                                    </li>
+                                    <br>
+                                    {% endfor %}
+                                </ul>
+                            {% elif wo.order_type == 'Legal' %}
+                                <ul class="recent-news clearfix mt-5" style="margin-top: 20px;">
+                                    {% for ord in wo.order_items %}
+                                    <li class="clearfix">
+                                        <div class="entry-header">
+                                            Order Item #{{ loop.index }} : <b>{{ ord.item_name }}</b>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </section>
+                    {% elif request_get and request_get != '' and wo and not is_single %}
+                        {% for w in wo %}
+                            {% set work_order = frappe.get_doc('Project', w) %}
+                            {% if work_order.status == 'Open' %}
+                                {% set status_color = 'orange' %}
+                            {% elif work_order.status == 'Completed' %}
+                                {% set status_color = 'green' %}
+                            {% elif work_order.status == 'In-Progress' %}
+                                {% set status_color = 'blue' %}
+                            {% else %}
+                                {% set status_color = 'red' %}
+                            {% endif %}
+                            {% if work_order.name %}
+                            <section id="recent_news-1" class="widget widget_recent_news">
+                                Order Number : <strong>{{ work_order.name }}</strong>
+                                <br>
+                                Order Date : <strong>{{ frappe.utils.formatdate(work_order.creation, "dd-MM-yyyy") }}</strong>
+                                <br>
+                                Status : 
+                                <span class="{{ status_color }}">
+                                    <b>{{ work_order.status or '-' }}</b>
+                                </span>
+                                <hr>
+                                {% if work_order.order_type == 'Visa' %}
+                                    <ul class="recent-news clearfix mt-5" style="margin-top: 20px;">
+                                        {% set count = namespace(value=1) %}
+                                        {% for ord in work_order.order_items %}
+                                            {% set detail_order = frappe.get_doc('Detail Order',ord.detail_order) %}
+                                            {% for detail in detail_order.details %}
+                                                {% set tka_to_array = detail.data_tka.split('-') %}
+                                                {% if request_get in tka_to_array %}
+                                                <li class="clearfix">
+                                                    <div class="entry-header">
+                                                        Order Item #{{ count.value }} : <b>{{ ord.item_name }}</b>
+                                                        <br>
+                                                        <span class="post-on">
+                                                            <span class="" style="font-size: 13px;">
+                                                                <b>{{ detail.data_tka }}</b>
+                                                                <br>
+                                                                {{ detail.status }}
+                                                            </span>
+                                                        </span>
+                                                        <br>
+                                                    </div>
+                                                </li>
+                                                {% set count.value = count.value + 1 %}
+                                                {% endif %}
+                                            {% endfor %}
+                                            <br>
+                                        {% endfor %}
+                                    </ul>
+                                {% elif work_order.order_type == 'Legal' %}
+                                    <ul class="recent-news clearfix mt-5" style="margin-top: 20px;">
+                                        {% for ord in work_order.order_items %}
+                                        <li class="clearfix">
+                                            <div class="entry-header">
+                                                Order Item #{{ loop.index }} : <b>{{ ord.item_name }}</b>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </li>
+                                        <br>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </section>   
+                            {% endif %}
+                        {% endfor %}
+                    {% elif request_get and request_get != '' and not wo and not is_single %}
+                        <section id="recent_news-1" class="widget widget_recent_news">
+                            <h4 class="widget-title" style="margin-bottom: 10px">Tenaga Kerja : {{ request_get }}</h4>
+                            <span class="red">
+                                not found
+                            </span>
+                        </section>
+                    {% elif request_get and request_get != '' and not wo %}
+                        <section id="recent_news-1" class="widget widget_recent_news">
+                            <h4 class="widget-title" style="margin-bottom: 10px">Order Number : {{ request_get }}</h4>
+                            <span class="red">
+                                not found
+                            </span>
+                        </section>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

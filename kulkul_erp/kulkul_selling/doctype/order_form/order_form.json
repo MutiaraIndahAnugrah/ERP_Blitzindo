@@ -1,0 +1,421 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-03-16 01:04:56.614907",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_3",
+  "amended_from",
+  "section_break_4",
+  "naming_series",
+  "customer",
+  "customer_name",
+  "order_form_type",
+  "order_type",
+  "tax_with_holding_category",
+  "default_company_bank_account",
+  "from_quotation",
+  "column_break_7",
+  "delivery_date",
+  "customer_group",
+  "order_category",
+  "sponsor_company",
+  "account_manager",
+  "territory",
+  "tax_id",
+  "tax_category",
+  "data_perusahaan",
+  "bill_to",
+  "nama_perusahaan_sponsor",
+  "contact",
+  "mobile_no",
+  "email_id",
+  "kontak_column",
+  "address",
+  "perusahaan_asli",
+  "nama_perusahaan",
+  "no_passport",
+  "perusahaan_sponsor",
+  "legal_document_section",
+  "akta_dan_sk",
+  "nib",
+  "npwp",
+  "wajib_lapor",
+  "kop_surat_dan_cap_perusahaan",
+  "ktp_hrd",
+  "column_break_27",
+  "izin_usaha",
+  "sertifikat_bpjs_perusahaan",
+  "passport_atau_ktp_pimpinan_tertinggi_atau_direktur",
+  "optional_form_1",
+  "optional_form_2",
+  "optional_form_3",
+  "cpl_section_break",
+  "default_currency",
+  "column_break_44",
+  "default_price_list",
+  "pilihan_order_section",
+  "refresh_price_list",
+  "items"
+ ],
+ "fields": [
+  {
+   "default": "Company",
+   "fetch_from": "customer.customer_type",
+   "fetch_if_empty": 1,
+   "fieldname": "order_form_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Order Form Type",
+   "options": "Company\nIndividual",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.order_form_type=='Personal'",
+   "fieldname": "data_perusahaan",
+   "fieldtype": "Section Break",
+   "label": "Data Perusahaan"
+  },
+  {
+   "fieldname": "nama_perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan"
+  },
+  {
+   "fieldname": "nama_perusahaan_sponsor",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan Sponsor"
+  },
+  {
+   "fieldname": "kontak_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bill_to",
+   "fieldtype": "Read Only",
+   "label": "Bill To"
+  },
+  {
+   "fieldname": "perusahaan_asli",
+   "fieldtype": "Link",
+   "label": "Perusahaan Asli",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "perusahaan_asli.no_passport",
+   "fetch_if_empty": 1,
+   "fieldname": "no_passport",
+   "fieldtype": "Data",
+   "label": "No Passport"
+  },
+  {
+   "fetch_from": "perusahaan_asli.perusahaan_sponsor",
+   "fetch_if_empty": 1,
+   "fieldname": "perusahaan_sponsor",
+   "fieldtype": "Data",
+   "label": "Perusahaan Sponsor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "legal_document_section",
+   "fieldtype": "Section Break",
+   "label": "Legal Document"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "akta_dan_sk",
+   "fieldtype": "Attach",
+   "label": "AKTA & SK"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "nib",
+   "fieldtype": "Attach",
+   "label": "NIB"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "npwp",
+   "fieldtype": "Attach",
+   "label": "NPWP"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "wajib_lapor",
+   "fieldtype": "Attach",
+   "label": "Wajib Lapor"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "kop_surat_dan_cap_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Kop Surat & Cap Perusahaan"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "ktp_hrd",
+   "fieldtype": "Attach",
+   "label": "KTP HRD"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "sertifikat_bpjs_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Sertifikat BPJS Perusahaan"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "izin_usaha",
+   "fieldtype": "Attach",
+   "label": "Izin Usaha"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "passport_atau_ktp_pimpinan_tertinggi_atau_direktur",
+   "fieldtype": "Attach",
+   "label": "Passport / KTP (Pimpinan Tertinggi / Direktur)"
+  },
+  {
+   "fieldname": "pilihan_order_section",
+   "fieldtype": "Section Break",
+   "label": "Order Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Order Items",
+   "options": "Order Form Items"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "tax_with_holding_category",
+   "fieldtype": "Data",
+   "label": "Tax With Holding Category"
+  },
+  {
+   "fieldname": "default_company_bank_account",
+   "fieldtype": "Link",
+   "label": "Default Company Bank Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "from_quotation",
+   "fieldtype": "Link",
+   "label": "From Quotation",
+   "options": "Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Delivery Date"
+  },
+  {
+   "fetch_from": "customer.lead_owner",
+   "fetch_if_empty": 1,
+   "fieldname": "account_manager",
+   "fieldtype": "Link",
+   "label": "Account Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID"
+  },
+  {
+   "fieldname": "tax_category",
+   "fieldtype": "Link",
+   "label": "Tax Category",
+   "options": "Tax Category"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "optional_form_1",
+   "fieldtype": "Attach",
+   "label": "Optional Form 1"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "optional_form_2",
+   "fieldtype": "Attach",
+   "label": "Optional Form 2"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "optional_form_3",
+   "fieldtype": "Attach",
+   "label": "Optional Form 3"
+  },
+  {
+   "fieldname": "cpl_section_break",
+   "fieldtype": "Section Break",
+   "label": "Currency and Price List"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_price_list",
+   "fieldtype": "Link",
+   "label": "Default Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Order Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Read Only",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Non Sponsor",
+   "fieldname": "order_category",
+   "fieldtype": "Select",
+   "label": "Order Category",
+   "options": "Non Sponsor\nSponsor"
+  },
+  {
+   "depends_on": "eval:doc.order_category == 'Sponsor'",
+   "fetch_from": "customer.company_perusahaan_sponsor",
+   "fetch_if_empty": 1,
+   "fieldname": "sponsor_company",
+   "fieldtype": "Link",
+   "label": "Sponsor Company",
+   "mandatory_depends_on": "eval:doc.order_category == 'Sponsor'",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "refresh_price_list",
+   "fieldtype": "Button",
+   "label": "Refresh Price List"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "mandatory_depends_on": "eval:doc.from_quotation",
+   "options": "Visa\nLegal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Reserve Order",
+   "link_fieldname": "order_form"
+  },
+  {
+   "link_doctype": "Detail Order",
+   "link_fieldname": "order_form"
+  }
+ ],
+ "modified": "2022-07-25 21:27:13.215673",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Order Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "customer, order_form_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "order_form_type",
+ "track_changes": 1
+}

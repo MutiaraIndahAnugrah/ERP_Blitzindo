@@ -1,0 +1,220 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+  background: #00387a;
+  color: #fff;
+}
+
+.main-footer {
+  padding: 120px 0 80px;
+}
+.main-footer h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.main-footer h4:after {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  content: "";
+  height: 1px;
+  width: 45px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.main-footer ul {
+  margin-top: -5px;
+}
+.main-footer ul a {
+  color: #fff;
+}
+.main-footer .widget_media_image {
+  margin-bottom: 18px;
+}
+.main-footer .ot-socials {
+  margin-top: 30px;
+}
+.main-footer .ot-socials a {
+  background: #fff;
+  border-color: #fff;
+  color: #363636;
+}
+.main-footer .ot-socials a:hover {
+  color: #fff;
+  background: #FCB01C;
+  border-color: #FCB01C;
+}
+.main-footer a.gray {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.main-footer a.gray:visited {
+  color: rgba(255, 255, 255, 0.5);
+}
+.main-footer a.gray:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer-bottom {
+  background: #002c60;
+  padding: 18px 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-bottom a:hover {
+  color: #fff;
+}
+.footer-bottom ul {
+  margin-bottom: 0;
+}
+.footer-bottom ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.mc4wp-form input[type=text],
+.mc4wp-form input[type=email] {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  height: 45px;
+}
+
+.main-footer .widget:last-child {
+  padding-bottom: 30px;
+}
+.main-footer .widget.padding-left {
+  padding-left: 70px;
+}
+.main-footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.main-footer ul li {
+  padding-bottom: 10px;
+}
+.main-footer ul li a {
+  position: relative;
+  padding-left: 14px;
+}
+.main-footer ul li a:before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  content: "";
+  font-family: FontAwesome;
+}
+.main-footer ul li a:hover {
+  color: #FCB01C;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .widget-inner {
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom ul li {
+    margin: 0 12px;
+  }
+}
+/* Back To Top*/
+#back-to-top {
+  background: #FCB01C;
+  border: 0 none;
+  border-radius: 2px;
+  bottom: 40px;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  opacity: 0;
+  outline: medium none;
+  position: fixed;
+  right: 40px;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out 0s;
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  background: #000;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+#back-to-top:before {
+  color: #fff;
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 22px;
+  margin: 5px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .footer-mobile-center {
+    text-align: center !important;
+  }
+  
+  .main-footer .widget.padding-left {
+    padding-left: 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom ul {
+    margin-top: 10px;
+  }
+
+  .footer-bottom ul li {
+    margin: 0 10px;
+  }
+}
+
+.ot-socials a {
+  border: 1px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  color: #4b4b4b;
+  display: inline-block;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  line-height: 35px;
+  margin-right: 6px;
+}
+.ot-socials a:hover {
+  color: #fff;
+  background: #FCB01C;
+  border-color: #FCB01C;
+}

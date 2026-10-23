@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-04-07 16:53:22.839808",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer_name",
+  "customer_company_name",
+  "reviews",
+  "customer_company_logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Company Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviews",
+   "fieldtype": "Small Text",
+   "label": "Reviews",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Customer Company Logo"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TWS-.YY.-.#####"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-13 22:00:04.408208",
+ "modified_by": "Administrator",
+ "module": "Kulkul Website",
+ "name": "Testimonial Website",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,113 @@
+{# blitz-dynamic-source-items-v1: grouped presentation v2, original invoice rows retained. #}
+{% set invoice = frappe.get_doc('Sales Invoice', doc.name) %}
+{% set collection = namespace(groups=[]) %}
+{% for item in invoice.items %}
+  {% set link = namespace(order=item.get('detail_order'), source=none) %}
+  {% if not link.order and item.get('so_detail') and item.get('sales_order') %}
+    {% set so_row = frappe.db.get_value('Sales Order Item', item.so_detail, ['parent', 'detail_order'], as_dict=True) %}
+    {% if so_row and so_row.parent == item.sales_order %}{% set link.order = so_row.detail_order %}{% endif %}
+  {% endif %}
+  {% if link.order and frappe.db.get_value('Detail Order', link.order, 'name') %}
+    {% set candidate = frappe.get_doc('Detail Order', link.order) %}
+    {% if candidate.has_permission('read') %}{% set link.source = candidate %}{% endif %}
+  {% endif %}
+  {% set details = (link.source.get('details') if link.source else []) or [] %}
+  {% set durations = [] %}
+  {% for detail in details %}
+    {% if detail.get('jangka_waktu') and detail.jangka_waktu not in durations %}{% set unused = durations.append(detail.jangka_waktu) %}{% endif %}
+  {% endfor %}
+  {% set duration_key = durations|sort|join(' / ') %}
+  {% set key = [item.item_code, item.rate, item.uom, duration_key] %}
+  {% set picked = namespace(group=none) %}
+  {% for existing in collection.groups %}{% if existing.key == key %}{% set picked.group = existing %}{% endif %}{% endfor %}
+  {% if picked.group is none %}
+    {% set picked.group = namespace(key=key, title=item.item_name or item.item_code or '', duration=duration_key,
+        uom=item.uom or '', qty=0, amount=0, rows=[], item_indices=[], detail_count=0,
+        mismatch=false, has_passport=false, has_visa=false, has_duration=false, has_amount=false) %}
+    {% set unused = collection.groups.append(picked.group) %}
+  {% endif %}
+  {% set group = picked.group %}
+  {% set group.qty = group.qty + item.qty %}
+  {% set group.amount = group.amount + item.amount %}
+  {% set group.detail_count = group.detail_count + details|length %}
+  {% set unused = group.item_indices.append(item.idx) %}
+  {% if details and details|length != item.qty %}{% set group.mismatch = true %}{% endif %}
+  {# Unit price comes directly from the invoice, not an allocation over source people. #}
+  {% for detail in details %}
+    {% set worker = namespace(doc=none) %}
+    {% if detail.get('data_tka') and frappe.db.get_value('Tenaga Kerja', detail.data_tka, 'name') %}
+      {% set candidate = frappe.get_doc('Tenaga Kerja', detail.data_tka) %}
+      {% if candidate.has_permission('read') %}{% set worker.doc = candidate %}{% endif %}
+    {% endif %}
+    {% set visas = [] %}
+    {% if detail.get('data_tka') and link.source.get('wo_number') %}
+      {% set references = frappe.get_all('Result Document', filters={'tka':detail.data_tka, 'work_orders':link.source.wo_number, 'docstatus':['!=',2]}, fields=['name']) %}
+      {% for reference in references %}
+        {% set result = frappe.get_doc('Result Document', reference.name) %}
+        {% if result.has_permission('read') and result.get('visa') and result.visa not in visas %}{% set unused = visas.append(result.visa) %}{% endif %}
+      {% endfor %}
+    {% endif %}
+    {% set name = detail.get('nama_tka') or (worker.doc.get('full_name') if worker.doc else '') or '' %}
+    {% set foreign = detail.get('foreign_name') or (worker.doc.get('nama_asing') if worker.doc else '') or '' %}
+    {% set passport = detail.get('no_passport_tka') or (worker.doc.get('no_passport') if worker.doc else '') or '' %}
+    {% set visa = visas|join(', ') %}
+    {% set duration = detail.get('jangka_waktu') or '' %}
+    {% set unused = group.rows.append({'name':name, 'foreign':foreign, 'passport':passport,
+        'visa':visa, 'duration':duration, 'amount':item.rate, 'message':''}) %}
+    {% if passport %}{% set group.has_passport = true %}{% endif %}
+    {% if visa %}{% set group.has_visa = true %}{% endif %}
+    {% if duration %}{% set group.has_duration = true %}{% endif %}
+    {% if item.rate is not none %}{% set group.has_amount = true %}{% endif %}
+  {% else %}
+    {% set message = 'Rincian belum tertaut pada item invoice maupun baris Sales Order sumbernya.' %}
+    {% if link.order and not link.source %}{% set message = 'Rincian sumber tidak tersedia atau tidak dapat diakses.' %}
+    {% elif link.source %}{% set message = 'Sumber tidak memiliki rincian TKA.' %}{% endif %}
+    {% set unused = group.rows.append({'name':'', 'foreign':'', 'passport':'', 'visa':'', 'duration':'', 'amount':none, 'message':message}) %}
+  {% endfor %}
+{% endfor %}
+
+<div class="blitz-source-items">
+{% for group in collection.groups %}
+  {% set columns = 2 + (1 if group.has_passport else 0) + (1 if group.has_visa else 0) + (1 if group.has_duration else 0) + (1 if group.has_amount else 0) %}
+  {% set name_width = 94 - (20 if group.has_passport else 0) - (20 if group.has_visa else 0) - (12 if group.has_duration else 0) - (20 if group.has_amount else 0) %}
+  <table class="table table-bordered table-condensed" data-blitz-item-rows="{{ group.item_indices|join(',') }}" data-blitz-detail-count="{{ group.detail_count }}" data-blitz-billed-qty="{{ group.qty }}" data-blitz-billed-amount="{{ group.amount }}">
+    <colgroup><col style="width:6%"><col style="width:{{ name_width }}%">
+      {% if group.has_passport %}<col style="width:20%">{% endif %}
+      {% if group.has_visa %}<col style="width:20%">{% endif %}
+      {% if group.has_duration %}<col style="width:12%">{% endif %}
+      {% if group.has_amount %}<col style="width:20%">{% endif %}
+    </colgroup>
+    <thead style="display:table-row-group">
+      <tr><th colspan="{{ columns }}" class="text-left">
+        <strong>{{ loop.index }}. {{ group.title|e }}{% if group.duration %} · {{ group.duration|e }}{% endif %}</strong><br>
+        Qty ditagih: <strong>{{ frappe.format_value(group.qty, {'fieldtype':'Float','precision':2}) }}</strong> {{ group.uom|e }}
+        &nbsp;|&nbsp; Total tagihan: <strong>{{ invoice.currency|e }} {{ frappe.format_value(group.amount, {'fieldtype':'Float','precision':2}) }}</strong>
+        &nbsp;|&nbsp; Rincian sumber: <strong>{{ group.detail_count }}</strong>
+      </th></tr>
+      <tr><th>No.</th><th>Nama</th>
+        {% if group.has_passport %}<th>No. paspor</th>{% endif %}
+        {% if group.has_visa %}<th>Visa terkait sumber</th>{% endif %}
+        {% if group.has_duration %}<th>Durasi</th>{% endif %}
+        {% if group.has_amount %}<th class="text-right">Harga / {{ (group.uom or 'unit')|e }} ({{ invoice.currency|e }})</th>{% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% set numbering = namespace(value=0) %}
+      {% for row in group.rows %}
+        {% if row.message %}
+        <tr><td>—</td><td colspan="{{ columns-1 }}">{{ row.message|e }}</td></tr>
+        {% else %}
+        {% set numbering.value = numbering.value + 1 %}
+        <tr>
+          <td>{{ numbering.value }}</td><td>{{ (row.name or '—')|e }}{% if row.foreign %} <span >({{ row.foreign|e }})</span>{% endif %}</td>
+          {% if group.has_passport %}<td>{{ (row.passport or '—')|e }}</td>{% endif %}
+          {% if group.has_visa %}<td>{{ (row.visa or '—')|e }}</td>{% endif %}
+          {% if group.has_duration %}<td>{{ (row.duration or '—')|e }}</td>{% endif %}
+          {% if group.has_amount %}<td class="text-right">{% if row.amount is not none %}{{ frappe.format_value(row.amount, {'fieldtype':'Float','precision':2}) }}{% else %}—{% endif %}</td>{% endif %}
+        </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endfor %}
+</div>

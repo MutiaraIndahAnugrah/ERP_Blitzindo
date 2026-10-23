@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-04 20:55:00.967934",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "create_result_document",
+  "document_name",
+  "status",
+  "type",
+  "visa_type",
+  "jenis_visa",
+  "legal_type",
+  "column_break_5",
+  "rptka",
+  "no_rptka",
+  "tka",
+  "issue_date",
+  "expired_date",
+  "result_document",
+  "refresh_data",
+  "downloadable"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "document_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Name",
+   "options": "Result Document",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval:(doc.visa_type!=\"RPTKA\" && doc.type == 'Visa')",
+   "fetch_from": "document_name.tka",
+   "fetch_if_empty": 1,
+   "fieldname": "tka",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "TKA",
+   "options": "Tenaga Kerja"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "document_name.issue_date",
+   "fetch_if_empty": 1,
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issue Date",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "document_name.expired_date",
+   "fetch_if_empty": 1,
+   "fieldname": "expired_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expired Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "document_name.result_document",
+   "fetch_if_empty": 1,
+   "fieldname": "result_document",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Result Document",
+   "read_only": 1
+  },
+  {
+   "default": "Visa",
+   "fetch_from": "document_name.type",
+   "fetch_if_empty": 1,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Visa\nLegal",
+   "read_only": 1
+  },
+  {
+   "default": "Visa",
+   "depends_on": "eval:doc.type == 'Visa'",
+   "fetch_from": "document_name.visa_type",
+   "fetch_if_empty": 1,
+   "fieldname": "visa_type",
+   "fieldtype": "Select",
+   "label": "Visa / RPTKA",
+   "options": "Visa\nRPTKA",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.visa_type==\"RPTKA\"",
+   "fetch_from": "document_name.rptka",
+   "fetch_if_empty": 1,
+   "fieldname": "rptka",
+   "fieldtype": "Link",
+   "label": "RPTKA",
+   "options": "RPTKA",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "In-Progress",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "In-Progress\nCompleted"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "create_result_document",
+   "fieldtype": "Button",
+   "label": "Create Result Document"
+  },
+  {
+   "depends_on": "eval:doc.visa_type == 'RPTKA'",
+   "fetch_from": "document_name.no_rptka",
+   "fetch_if_empty": 1,
+   "fieldname": "no_rptka",
+   "fieldtype": "Data",
+   "label": "No RPTKA",
+   "mandatory_depends_on": "eval:doc.visa_type == 'RPTKA'",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refresh_data",
+   "fieldtype": "Button",
+   "label": "Refresh Data",
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.status == \"Completed\"",
+   "description": "Client can Download",
+   "fieldname": "downloadable",
+   "fieldtype": "Check",
+   "label": "Downloadable"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Legal'",
+   "fieldname": "legal_type",
+   "fieldtype": "Link",
+   "label": "Legal Type",
+   "options": "Legal",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Visa'",
+   "fieldname": "jenis_visa",
+   "fieldtype": "Link",
+   "label": "Jenis Visa",
+   "options": "Visa",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-08 15:01:38.799636",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Result of Work Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

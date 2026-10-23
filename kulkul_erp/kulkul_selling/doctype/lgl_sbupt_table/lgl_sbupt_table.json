@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-04 01:33:27.710636",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "list_kode_subklasifikasi",
+  "lgl_sbupt_nomor_induk_berusaha",
+  "lgl_sbupt_npwp_perusahaan",
+  "lgl_sbupt_akta_pendirian",
+  "lgl_sbupt_akta_perubahan",
+  "lgl_sbupt_ktp_passport_para_pemegang_saham",
+  "lgl_sbupt_npwp_para_pemegang_saham",
+  "column_break_8",
+  "lgl_sbupt_pas_foto_direktur",
+  "lgl_sbupt_kop_surat_company",
+  "lgl_sbupt_stempel",
+  "lgl_sbupt_tanda_tangan_direktur",
+  "lgl_sbupt_contract",
+  "lgl_sbupt_certificate_for_completion_acceptance"
+ ],
+ "fields": [
+  {
+   "fieldname": "list_kode_subklasifikasi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "List Kode Subklasifikasi",
+   "options": "Detail Order Jenis SBU",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lgl_sbupt_nomor_induk_berusaha",
+   "fieldtype": "Attach",
+   "label": "Nomor Induk Berusaha - Business Identification Number"
+  },
+  {
+   "fieldname": "lgl_sbupt_npwp_perusahaan",
+   "fieldtype": "Attach",
+   "label": "NPWP Perusahaan-Company Tax Card"
+  },
+  {
+   "fieldname": "lgl_sbupt_akta_pendirian",
+   "fieldtype": "Attach",
+   "label": "Akta Pendirian- Deed of Establishment & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_sbupt_akta_perubahan",
+   "fieldtype": "Attach",
+   "label": "Akta Perubahan - Change of Deed & Minister Decree - Surat Keputusan Menteri Hukum dan HAM (apabila ada-if any)"
+  },
+  {
+   "fieldname": "lgl_sbupt_ktp_passport_para_pemegang_saham",
+   "fieldtype": "Attach",
+   "label": "KTP/Passport Para Pemegang Saham - Shareholder Identity Card -"
+  },
+  {
+   "fieldname": "lgl_sbupt_npwp_para_pemegang_saham",
+   "fieldtype": "Attach",
+   "label": "NPWP Para Pemegang Saham - Shareholder Tax Card"
+  },
+  {
+   "fieldname": "lgl_sbupt_pas_foto_direktur",
+   "fieldtype": "Attach",
+   "label": "Pas Foto Direktur - Director Photo 3x4"
+  },
+  {
+   "fieldname": "lgl_sbupt_kop_surat_company",
+   "fieldtype": "Attach",
+   "label": "Kop Surat - Company Letter Head - Note (File berbentuk .docx)"
+  },
+  {
+   "fieldname": "lgl_sbupt_stempel",
+   "fieldtype": "Attach",
+   "label": "Stempel - Company Stamp"
+  },
+  {
+   "fieldname": "lgl_sbupt_tanda_tangan_direktur",
+   "fieldtype": "Attach",
+   "label": "Tanda Tangan Direktur"
+  },
+  {
+   "description": "Pengalaman Perusahaan berkaitan dengan Kualifikasi SBU dalam 3 tahun dengan proyek bernilai IDR 83,300,000,000",
+   "fieldname": "lgl_sbupt_contract",
+   "fieldtype": "Attach",
+   "label": "Contract"
+  },
+  {
+   "fieldname": "lgl_sbupt_certificate_for_completion_acceptance",
+   "fieldtype": "Attach",
+   "label": "Certificate for Completion Acceptance"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-04 02:18:23.043380",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "LGL SBUPT Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

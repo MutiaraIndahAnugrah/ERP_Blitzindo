@@ -1,0 +1,110 @@
+{% extends "www/base.html" %}
+{% block title %}Working Visa{% endblock %}
+
+{% block content %}
+{% set content = frappe.get_all('Website Service Content',fields = ['*'], filters = {'type':'Working Visa'}, order_by='creation DESC', limit=1) %}
+<div id="content" class="site-content">
+    <div class="page-header" style="background: url('{{ content[0].background_page_header }}') !important;">
+        <!-- style="background: url('/assets/kulkul_erp/images/services/service-header.jpeg');" -->
+        <div class="container">
+            <div class="breadc-box no-line">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="page-title">Working Visa</h1>
+                    </div>
+                    <div class="col-md-6 mobile-left text-right">
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="/index">Home</a></li>
+                            <li><a href="javascript:(0)">Services</a></li>
+                            <li class="active">Working Visa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <div class="container">
+            <div class="row">
+
+                <div id="primary" class="content-area col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+                    <main id="main" class="site-main">
+
+                        <article class="ot_service type-ot_service status-publish has-post-thumbnail hentry">
+                            <div class="inner-post">
+                                <section class="wpb_row row-fluid">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="wpb_column column_container col-sm-12">
+                                                <div class="column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <h2>Working Visa (ITAS)</h2>
+                                                        {{ content[0].content_full }}
+                                                        {% if content[0].content_image_1 %}
+                                                            <div class="empty_space_30"></div>
+                                                            <img src="{{ content[0].content_image_1 }}" alt="Picture Working Visa (ITAS)">
+                                                        {% endif %}
+                                                        {% if content[0].content_image_2 %}
+                                                            <div class="empty_space_30"></div>
+                                                            <img src="{{ content[0].content_image_2 }}" alt="Picture Working Visa (ITAS)">
+                                                        {% endif %}
+                                                        {% if content[0].content_image_3 %}
+                                                            <div class="empty_space_30"></div>
+                                                            <img src="{{ content[0].content_image_3 }}" alt="Picture Working Visa (ITAS)">
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </article>
+
+                    </main>
+                    <!-- #main -->
+                </div>
+
+                <aside id="sidebar" class="widget-area service-sidebar col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <section id="nav_menu-1" class="widget widget_nav_menu">
+                        <h4 class="widget-title">Services</h4>
+                        <div class="menu-service-menu-container">
+                            <ul id="menu-service-menu" class="menu">
+                                <li class="current-menu-item"><a href="/services/working-visa">Working Visa</a></li>
+                                <li><a href="/services/business-visa">Business Visa</a></li>
+                                <li><a href="/services/company-establishment">Company Establishment</a></li>
+                                <li><a href="/services/other-service">Other Service</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="text-1" class="widget widget_text bg-second text-light">
+                        <h4 class="widget-title">Do you need support !</h4>
+                        <div class="textwidget">
+                            <ul class="semi-bold">
+                                <li><span class="normal">Phone:</span> <a href="tel:+62 21 65868029">+62 21 65868029</a></li>
+                                <li><span class="normal">Office Indonesia:</span> <br> Ruko Mega Glodok Kemayoran Blok E 18
+                                    <br> Jl. Angkasa Kav. B6,
+                                    <br> Kemayoran, Jakarta Pusat 10610
+                                </li>
+                                <li><span class="normal">Mail:</span> <a href="mailto:inquiry@blitzindoutama.com">inquiry@blitzindoutama.com</a></li>
+                            </ul>
+                            <div class="gaps style-parent"></div>
+                            <div class="wpcf7">
+                                <div class="screen-reader-response"></div>
+                                <a href="/contact">
+                                    <button class="wpcf7-form-control wpcf7-submit btn">Contact Us</button>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

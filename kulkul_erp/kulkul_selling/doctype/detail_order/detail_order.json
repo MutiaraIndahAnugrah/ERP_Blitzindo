@@ -1,0 +1,1919 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-04-02 14:08:02.946194",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sales_order",
+  "wo_number",
+  "customer",
+  "customer_name",
+  "type",
+  "order_form",
+  "reserve_order",
+  "legal_sku_code",
+  "legal_service_name",
+  "legal_sub_name",
+  "column_break_6",
+  "item_code",
+  "item_name",
+  "qty",
+  "currency",
+  "rate",
+  "amount",
+  "notes",
+  "lgl_cv_1_legal_required_document_section",
+  "lgl_cv_1_company_name",
+  "lgl_cv_1_office_address",
+  "lgl_cv_1_domicille_letter",
+  "lgl_cv_1_lease_agreement",
+  "lgl_cv_1_company_email_address",
+  "column_break_22",
+  "lgl_cv_1_office_phone_number",
+  "lgl_cv_1_authorized_capital",
+  "lgl_cv_1_issued_capital",
+  "lgl_cv_1_business_fields",
+  "lgl_cv_1_business_fields_lainnya",
+  "section_break_35",
+  "ally_composition",
+  "lgl_pt_1_legal_required_document_section",
+  "lgl_pt_1_company_name",
+  "lgl_pt_1_office_address",
+  "lgl_pt_1_domicille_letter",
+  "lgl_pt_1_lease_agreement",
+  "lgl_pt_1_company_email_address",
+  "column_break_38",
+  "lgl_pt_1_office_phone_number",
+  "lgl_pt_1_authorized_capital",
+  "lgl_pt_1_issued_capital",
+  "lgl_pt_1_business_fields",
+  "lgl_pt_1_business_fields_lainnya",
+  "legal_required_document_individu_section",
+  "lgl_pt_1_shareholder_composition",
+  "section_break_47",
+  "commisioner_and_director_composition_lgl_pt",
+  "section_break_68",
+  "lgl_pma_1_company_name",
+  "lgl_pma_1_office_address",
+  "lgl_pma_1_domicille_letter",
+  "lgl_pma_1_lease_agreement",
+  "column_break_74",
+  "lgl_pma_1_company_email_address",
+  "lgl_pma_1_office_phone_number",
+  "lgl_pma_1_modal_dasar",
+  "lgl_pma_1_business_fields",
+  "lgl_pma_1_business_fields_lainnya",
+  "section_break_77",
+  "lgl_pma_1_shareholder_composition",
+  "section_break_60",
+  "commisioner_and_director_composition_pma",
+  "section_lgl_akta_1_2",
+  "lgl_akta_akta_pendirian_deed_of_establishment",
+  "lgl_akta_akta_perubahan_cod_dan_minister_decree_surat_kemenku",
+  "lgl_akta_ktp_para_pemegang_saham",
+  "lgl_akta_data_perubahan",
+  "section_break_85",
+  "lgl_npwp_1_akta_pendirian",
+  "lgl_npwp_1_alamat_perusahaan",
+  "lgl_npwp_1_nomor_telepon",
+  "lgl_npwp_1_ktp_direktur",
+  "column_break_90",
+  "lgl_npwp_1_input_email",
+  "lgl_npwp_1_input_email_email",
+  "lgl_npwp_1_input_email_password",
+  "section_break_94",
+  "lgl_npwp_2_ktp_identity_card",
+  "lgl_npwp_2_nomor_hp_phone_number",
+  "lgl_npwp_2_alamat_domisili_domicille_address",
+  "lgl_npwp_2_pekerjaan",
+  "lgl_npwp_2_pekerjaan_lainnya",
+  "lgl_npwp_2_penghasilan_per_bulan",
+  "lgl_npwp_2_input_email",
+  "lgl_npwp_2_input_email_email",
+  "lgl_npwp_2_input_email_password",
+  "section_break_101",
+  "lgl_bpjs_input_email",
+  "lgl_bpjs_input_email_email",
+  "lgl_bpjs_input_email_password",
+  "lgl_bpjs_nama_perusahaan",
+  "lgl_bpjs_alamat_lengkap",
+  "lgl_bpjs_no_telpon",
+  "lgl_bpjs_npwp_perusahaan",
+  "lgl_bpjs_nomor_induk_berusaha",
+  "lgl_bpjs_aset_perusahaan",
+  "column_break_111",
+  "lgl_bpjs_omset_pertahun",
+  "lgl_bpjs_identity_card_director",
+  "lgl_bpjs_alamat_domisili_domicille_address",
+  "lgl_bpjs_nomor_hp",
+  "lgl_bpjs_personal_email_address",
+  "lgl_bpjs_nama_ibu_kandung",
+  "lgl_bpjs_npwp_pribadi",
+  "lgl_bpjs_upah_salary",
+  "section_break_wlkp",
+  "lgl_wlkp_nomor_induk_berusaha",
+  "lgl_wlkp_email_address",
+  "column_break_123",
+  "lgl_wlkp_upah_tertinggi",
+  "lgl_wlkp_upah_terendah",
+  "section_break_121",
+  "lgl_wlkp_data_pekerja",
+  "section_break_lgl_iso_1_8",
+  "lgl_iso_nama_perusahaan",
+  "lgl_iso_alamat",
+  "lgl_iso_email",
+  "lgl_iso_nomor_telepon",
+  "column_break_134",
+  "lgl_iso_company_profile",
+  "lgl_iso_nomor_induk_berusaha",
+  "lgl_iso_akta_pendirian",
+  "lgl_iso_akta_perubahan",
+  "lgl_iso_npwp",
+  "section_break_lgl_iso_9_11",
+  "lgl_iso_2_nama_perusahaan",
+  "lgl_iso_2_address",
+  "lgl_iso_2_email",
+  "lgl_iso_2_nomor_telepon",
+  "lgl_iso_2_website",
+  "lgl_iso_2_company_profile",
+  "lgl_iso_2_nomor_induk_berusaha",
+  "lgl_iso_2_akta_pendirian",
+  "lgl_iso_2_akta_perubahan",
+  "lgl_iso_2_npwp",
+  "lgl_iso_2_struktur_perusahaan_beserta_nama",
+  "lgl_iso_2_jumlah_karyawan",
+  "column_break_152",
+  "lgl_iso_2_karyawan_tetap",
+  "lgl_iso_2_karyawan_kontrak",
+  "lgl_iso_2_kop_surat",
+  "lgl_iso_2_logo_perusahaan",
+  "lgl_iso_2_stempel",
+  "lgl_iso_2_tanda_tangan_direktur",
+  "section_break_159",
+  "lgl_iso_2_berikan_pilihan",
+  "column_break_160",
+  "lgl_iso_2_sertifikat_badan_usaha",
+  "lgl_iso_2_proyek_yang_sedang_berjalan",
+  "section_break_161",
+  "lgl_iso_2_list_vendor",
+  "list_supplier_section",
+  "lgl_iso_2_list_supplier",
+  "section_lgl_kta",
+  "lgl_kta_nama_perusahaan",
+  "lgl_kta_alamat_perusahaan",
+  "lgl_kta_npwp_perusahaan",
+  "lgl_kta_wna_wni",
+  "column_break_173",
+  "lgl_kta_pas_foto_pjbu",
+  "lgl_kta_identitas_pjbu",
+  "lgl_kta_kitas_pjbu",
+  "lgl_kta_npwp_pjbu",
+  "section_lgl_sbu",
+  "lgl_sbu_kitas_pjbu",
+  "lgl_sbu_npwp_pjbu",
+  "lgl_sbu_sertifikat_badan_usaha",
+  "lgl_sbu_pergantian_alamat",
+  "lgl_sbu_surat_domilsili",
+  "section_break_sburo",
+  "lgl_sburo_table",
+  "section_break_sbupt",
+  "lgl_sbupt_table",
+  "section_lgl_taxdata",
+  "lgl_taxdata_akta_perubahan",
+  "lgl_taxdata_npwp_direktur",
+  "column_break_179",
+  "lgl_taxdata_email",
+  "lgl_taxdata_email_password",
+  "lgl_taxdata_nib",
+  "section_break_lgl_bujka",
+  "lgl_bujka_mother_company_article_of_association",
+  "lgl_bujka_mother_company_business_license_legalized_by_notary",
+  "lgl_bujka_mother_company_phone_number_nomor_telfon",
+  "lgl_bujka_ro_phone_number_nomor_telfon_kantor_perwakilan",
+  "lgl_bujka_ro_address_alamat_kantor_perwakilan",
+  "column_break_189",
+  "lgl_bujka_ro_domicille_letter_surat_domisili_kantor_perwakilan",
+  "lgl_bujka_authorized_capital_modal_dasar",
+  "lgl_bujka_chief_representative_passport_passport_kepala",
+  "lgl_bujka_chief_representative_phone_number_nomor_telfon",
+  "lgl_bujka_chief_representative_address_alamat_kepala",
+  "section_break_oss_nib",
+  "lgl_oss_nib_username_oss",
+  "lgl_oss_nib_password_oss",
+  "lgl_oss_nib_hal_yang_akan_diubah",
+  "section_break_lgl_stamp",
+  "lgl_stamp_logo_perusahaan",
+  "lgl_stamp_nama_perusahaan",
+  "section_break_skklsbu",
+  "lgl_skklsbu_list_kode_subklasifikasi",
+  "section_break_lgl_revo",
+  "lgl_revo_nib",
+  "lgl_revo_npwp",
+  "lgl_revo_bpjs",
+  "column_break_208",
+  "lgl_revo_email",
+  "lgl_revo_password_email",
+  "lgl_revo_username_oss",
+  "lgl_revo_password_oss",
+  "section_break_bpjs_5_6",
+  "lgl_bpjs_2_alamat_domisili_domicille_address",
+  "lgl_bpjs_2_nomor_hp_phone_number",
+  "lgl_bpjs_2_personal_email_address",
+  "column_break_217",
+  "lgl_bpjs_2_nama_ibu_kandung",
+  "lgl_bpjs_2_npwp_pribadi_personal_tax_card",
+  "lgl_bpjs_2_upah_salary",
+  "section_break_lgl_spvhalal_1_lgl_silapta",
+  "lgl_silapta_npwp",
+  "lgl_silapta_sbu",
+  "lgl_silapta_nib",
+  "lgl_silapta_email",
+  "lgl_silapta_password",
+  "lgl_silapta_bujka",
+  "lgl_silapta_kontrak_proyek",
+  "lgl_silapta_laporan_keuangan_bujka_induk",
+  "lgl_silapta_laporan_keuangan_bujka_but",
+  "lgl_silapta_cv_tki_pendamping",
+  "lgl_silapta_cv_tka",
+  "data_perusahaan_mitra_kso_section",
+  "lgl_silapta_nib_mitra_kso",
+  "lgl_silapta_npwp_mitra_kso",
+  "lgl_silapta_sbu_mitra_kso",
+  "lgl_silapta_konstribusi_modal_bujka",
+  "lgl_silapta_konstribusi_modal_bujka_mitra_lokal",
+  "lgl_silapta_daftar_alat_mitra_kso",
+  "lgl_silapta_daftar_alat",
+  "lgl_silapta_material_mitra_kso",
+  "lgl_silapta_material",
+  "lgl_silapta_pengalaman_kerja_luar_negri",
+  "lgl_silapta_pengalaman_kerja_dalam_negri",
+  "data_perusahaan_sub_penyedia_jasa_section",
+  "lgl_silapta_nib_sub_penyedia_jasa",
+  "lgl_silapta_nilai_kontrak",
+  "lgl_silapta_kontrak_dengan_sub_penyedia_jasa",
+  "lgl_silapta_struktur_organinsasi_proyek",
+  "lgl_silapta_cv_manager",
+  "lgl_silapta_laporan_kemajuan_proyek_yang_di_ttd_oleh",
+  "lgl_silapta_skaskt_tenaga_kerja_proyek",
+  "lgl_silapta_daftar_material_dan_distributor_material",
+  "legal_required_document_section",
+  "lgl_pkp_ktp_direktur",
+  "lgl_pkp_npwp_direktur",
+  "lgl_pkp_nib",
+  "lgl_pkp_npwp_perusahaan",
+  "lgl_pkp_akta_perusahaan",
+  "lgl_pkp_laporan_keuangan_bulan_terahir",
+  "lgl_pkp_daftar_aset_perusahaan",
+  "lgl_pkp_foto_tempat_kegiatan_usaha",
+  "lgl_pkp_denah_lokasi_usaha",
+  "legal_required_document_section_lgl_bun_lapspt",
+  "lgl_bun_lapspt_formulir_spt_tahunan_badan_1771",
+  "lgl_bun_lapspt_sp_masa_pph_pasal_21",
+  "lgl_bun_lapspt_bukti_pemotongan_pph_pasal_23",
+  "lgl_bun_lapspt_bukti_potong_pph_pasal_4_ayat_2",
+  "lgl_bun_lapspt_spt_masa_ppn",
+  "lgl_bun_lapspt_bukti_potong_pph",
+  "lgl_bun_lapspt_bukti_pembayaran_untuk_surat_tagihan_pajak_pph",
+  "lgl_bun_lapspt_bukti_pembayaran_pph",
+  "lgl_bun_lapspt_laporan_keuangan",
+  "section_order_items_visa",
+  "details",
+  "section_more_information",
+  "order_form_item",
+  "amended_from",
+  "order_site_hidden",
+  "order_category_hidden",
+  "sponsor_company_hidden"
+ ],
+ "fields": [
+  {
+   "default": "DO-.customer_name.-.YY.-#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "DO-.customer_name.-.YY.-#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "length": 140,
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fetch_if_empty": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "length": 20,
+   "options": "Visa\nLegal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "options": "currency",
+   "permlevel": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "currency",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "depends_on": "eval:doc.type != 'Legal'",
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Detail Order Items"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "length": 40,
+   "no_copy": 1,
+   "options": "Detail Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_form_item",
+   "fieldtype": "Read Only",
+   "in_standard_filter": 1,
+   "label": "Order Form Item",
+   "length": 20
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Read Only",
+   "label": "Customer Name"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Legal\"",
+   "fieldname": "legal_sku_code",
+   "fieldtype": "Link",
+   "label": "Legal SKU Code",
+   "mandatory_depends_on": "eval:doc.type == \"Legal\"",
+   "options": "Legal SKU Code"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Legal\"",
+   "fetch_from": "legal_sku_code.service_name",
+   "fieldname": "legal_service_name",
+   "fieldtype": "Data",
+   "label": "Legal Service Name",
+   "read_only_depends_on": "eval:doc.type == \"Legal\""
+  },
+  {
+   "depends_on": "eval:doc.type == \"Legal\"",
+   "fetch_from": "legal_sku_code.sub_name",
+   "fieldname": "legal_sub_name",
+   "fieldtype": "Data",
+   "label": "Legal Sub Name",
+   "read_only_depends_on": "eval:doc.type == \"Legal\""
+  },
+  {
+   "fieldname": "lgl_cv_1_company_name",
+   "fieldtype": "Data",
+   "label": "Company Name",
+   "length": 100
+  },
+  {
+   "fieldname": "lgl_cv_1_office_address",
+   "fieldtype": "Data",
+   "label": "Office Address"
+  },
+  {
+   "fieldname": "lgl_cv_1_domicille_letter",
+   "fieldtype": "Attach",
+   "label": "Domicille Letter"
+  },
+  {
+   "fieldname": "lgl_cv_1_lease_agreement",
+   "fieldtype": "Attach",
+   "label": "Lease Agreement"
+  },
+  {
+   "fieldname": "lgl_cv_1_company_email_address",
+   "fieldtype": "Data",
+   "label": "Company Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_cv_1_office_phone_number",
+   "fieldtype": "Data",
+   "label": "Office Phone Number"
+  },
+  {
+   "description": "Minimal Rp 50.000.000",
+   "fieldname": "lgl_cv_1_authorized_capital",
+   "fieldtype": "Data",
+   "label": "Modal Dasar - Authorized Capital"
+  },
+  {
+   "description": "Minimal 25% dari modal dasar yang diinput sebelumnya",
+   "fieldname": "lgl_cv_1_issued_capital",
+   "fieldtype": "Data",
+   "label": "Modal di Tempatkan - Issued Capital"
+  },
+  {
+   "fieldname": "lgl_cv_1_business_fields",
+   "fieldtype": "Select",
+   "label": "Business Fields",
+   "options": "Pertanian, Kehutanan dan Perikanan\nPertambangan dan Penggalian\nIndustri Pengolahan\nPengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin\nTreatment Air, Treatment Air Limbah, Treatment dan Pemulihan Material Sampah, dan Aktivitas Remediasi\nKonstruksi\nPerdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor\nPengangkutan dan Pergudangan\nPenyediaan Akomodasi Dan Penyediaan Makan Minum\nInformasi Dan Komunikasi\nAktivitas Keuangan dan Asuransi\nReal Estat\nAktivitas Profesional, Ilmiah Dan Teknis\nAktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi, Ketenagakerjaan, Agen Perjalanan dan Penunjang Usaha Lainnya\nAdministrasi Pemerintahan, Pertahanan Dan Jaminan Sosial Wajib\nPendidikan\nAktivitas Kesehatan Manusia Dan Aktivitas Sosial\nKesenian, Hiburan Dan Rekreasi\nAktivitas Jasa Lainnya\nAktivitas Rumah Tangga Sebagai Pemberi Kerja; Aktivitas Yang Menghasilkan Barang Dan Jasa Oleh Rumah Tangga yang Digunakan untuk Memenuhi Kebutuhan Sendiri\nAktivitas Badan Internasional Dan Badan Ekstra Internasional Lainnya"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-CV-1\",\"LGL-BUN-CV\"], doc.legal_sku_code))",
+   "fieldname": "lgl_cv_1_legal_required_document_section",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PT-1\",\"LGL-BUN-PT-1\"], doc.legal_sku_code))",
+   "fieldname": "lgl_pt_1_legal_required_document_section",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_pt_1_company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "lgl_pt_1_office_address",
+   "fieldtype": "Data",
+   "label": "Office Address"
+  },
+  {
+   "fieldname": "ally_composition",
+   "fieldtype": "Table",
+   "label": "Ally Composition Members",
+   "options": "Legal Allay Composition Items"
+  },
+  {
+   "fieldname": "lgl_pt_1_domicille_letter",
+   "fieldtype": "Attach",
+   "label": "Domicille Letter"
+  },
+  {
+   "fieldname": "lgl_pt_1_lease_agreement",
+   "fieldtype": "Attach",
+   "label": "Lease Agreement"
+  },
+  {
+   "fieldname": "lgl_pt_1_company_email_address",
+   "fieldtype": "Data",
+   "label": "Company Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_pt_1_office_phone_number",
+   "fieldtype": "Data",
+   "label": "Office Phone Number"
+  },
+  {
+   "description": "Minimal Rp 50.000.000",
+   "fieldname": "lgl_pt_1_authorized_capital",
+   "fieldtype": "Data",
+   "label": "Modal Dasar - Authorized Capital",
+   "length": 30
+  },
+  {
+   "description": "Minimal 25% dari modal dasar yang diinput sebelumnya",
+   "fieldname": "lgl_pt_1_issued_capital",
+   "fieldtype": "Data",
+   "label": "Modal Ditempatkan - Issued Capital",
+   "length": 30
+  },
+  {
+   "description": "Shareholder Composition - Komposisi Sekutu\n(Minimal 2 orang)",
+   "fieldname": "lgl_pt_1_shareholder_composition",
+   "fieldtype": "Table",
+   "label": "Shareholder Composition",
+   "options": "Legal Shareholder Composition"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PT-1\",\"LGL-BUN-PT-1\"], doc.legal_sku_code))",
+   "fieldname": "legal_required_document_individu_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "wo_number",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "WO Number",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "length": 20,
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_site_hidden",
+   "fieldtype": "Data",
+   "label": "Order Site Hidden",
+   "length": 50,
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_category_hidden",
+   "fieldtype": "Data",
+   "label": "Order Category Hidden",
+   "length": 20,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sponsor_company_hidden",
+   "fieldtype": "Data",
+   "label": "Sponsor Company Hidden",
+   "length": 130,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PMA-1\",\"LGL-BUN-PT-2\"], doc.legal_sku_code))",
+   "fieldname": "section_break_68",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "reserve_order",
+   "fieldtype": "Data",
+   "label": "Reserve Order",
+   "length": 20,
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_form",
+   "fieldtype": "Data",
+   "label": "Order Form",
+   "length": 20,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lgl_pma_1_company_name",
+   "fieldtype": "Data",
+   "label": "Company Name - Nama Perusahaan",
+   "length": 100
+  },
+  {
+   "fieldname": "lgl_pma_1_office_address",
+   "fieldtype": "Small Text",
+   "label": "Office Address - Alamat Kantor"
+  },
+  {
+   "fieldname": "lgl_pma_1_domicille_letter",
+   "fieldtype": "Attach",
+   "label": "Domicille Letter - Surat Domisili"
+  },
+  {
+   "fieldname": "lgl_pma_1_lease_agreement",
+   "fieldtype": "Attach",
+   "label": "Lease Agreement - Surat Sewa Kantor"
+  },
+  {
+   "fieldname": "lgl_pma_1_company_email_address",
+   "fieldtype": "Data",
+   "label": "Company Email Address - Alamat email",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_pma_1_office_phone_number",
+   "fieldtype": "Data",
+   "label": "Office Phone Number - Nomor Telpon Kantor",
+   "length": 20
+  },
+  {
+   "description": "Minimal Rp 10.000.000.000",
+   "fieldname": "lgl_pma_1_modal_dasar",
+   "fieldtype": "Currency",
+   "label": "Modal Dasar - Authorized (IDR)Capital",
+   "non_negative": 1
+  },
+  {
+   "description": "Minimal 2 orang",
+   "fieldname": "lgl_pma_1_shareholder_composition",
+   "fieldtype": "Table",
+   "label": "Shareholder Composition - Komposisi Pemegang Saham",
+   "options": "Legal Shareholder Composition"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && ((doc.legal_sku_code == 'LGL-Akta-1') || (doc.legal_sku_code == 'LGL-Akta-2')))",
+   "fieldname": "section_lgl_akta_1_2",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_akta_akta_pendirian_deed_of_establishment",
+   "fieldtype": "Attach",
+   "label": "Akta Pendirian- Deed of Establishment & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_akta_akta_perubahan_cod_dan_minister_decree_surat_kemenku",
+   "fieldtype": "Attach",
+   "label": "Akta Perubahan - Change of Deed & Minister Decree - Surat Keputusan Menteri Hukum dan HAM (apabila ada-if any)"
+  },
+  {
+   "fieldname": "lgl_akta_ktp_para_pemegang_saham",
+   "fieldtype": "Attach",
+   "label": "Shareholder Identity Card - KTP Para Pemegang Saham"
+  },
+  {
+   "description": "Contoh: Perubahan Direksi, Perubahan Pemiliki Saham, dll",
+   "fieldname": "lgl_akta_data_perubahan",
+   "fieldtype": "Text",
+   "label": "Data Perubahan"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PMA-1\",\"LGL-BUN-PT-2\"], doc.legal_sku_code))",
+   "fieldname": "section_break_77",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_74",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-NPWP-1\",\"LGL-NPWP-2\",\"LGL-NPWP-3\",\"LGL-NPWP-4\",\"LGL-BUN-CV\",\"LGL-BUN-PT-2\",\"LGL-BUN-RO-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_85",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_npwp_1_akta_pendirian",
+   "fieldtype": "Attach",
+   "label": "Akta Pendirian- Deed of Establishment & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_npwp_1_alamat_perusahaan",
+   "fieldtype": "Small Text",
+   "label": "Alamat Perusahaan - Company Address"
+  },
+  {
+   "fieldname": "lgl_npwp_1_nomor_telepon",
+   "fieldtype": "Data",
+   "label": "Nomor Telepon - Telephone Number"
+  },
+  {
+   "fieldname": "lgl_npwp_1_ktp_direktur",
+   "fieldtype": "Attach",
+   "label": "KTP Direktur - Director Identity Card"
+  },
+  {
+   "default": "Menggunakan email yang sudah ada",
+   "fieldname": "lgl_npwp_1_input_email",
+   "fieldtype": "Select",
+   "label": "Input Email",
+   "options": "Menggunakan email yang sudah ada\nDibuatkan email baru"
+  },
+  {
+   "fieldname": "column_break_90",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-NPWP-5\",\"LGL-BUN-PT-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_94",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_more_information",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "More Information"
+  },
+  {
+   "fieldname": "lgl_npwp_2_ktp_identity_card",
+   "fieldtype": "Attach",
+   "label": "KTP - Identity Card"
+  },
+  {
+   "fieldname": "lgl_npwp_2_nomor_hp_phone_number",
+   "fieldtype": "Data",
+   "label": "Nomor HP - Phone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "lgl_npwp_2_alamat_domisili_domicille_address",
+   "fieldtype": "Small Text",
+   "label": "Alamat Domisili - Domicille Address"
+  },
+  {
+   "fieldname": "lgl_npwp_2_pekerjaan",
+   "fieldtype": "Select",
+   "label": "Pekerjaan",
+   "options": "PNS\nPegawai BUMN\nTNI\nPOLRI\nPegawai Swasta\nUsaha Sendiri\nLain-Lain"
+  },
+  {
+   "depends_on": "eval:doc.lgl_npwp_2_pekerjaan == 'Lain-Lain'",
+   "fieldname": "lgl_npwp_2_pekerjaan_lainnya",
+   "fieldtype": "Data",
+   "label": "Pekerjaan Lainnya",
+   "length": 60,
+   "mandatory_depends_on": "eval:doc.lgl_npwp_2_pekerjaan == 'Lain-Lain'"
+  },
+  {
+   "fieldname": "lgl_npwp_2_penghasilan_per_bulan",
+   "fieldtype": "Currency",
+   "label": "Penghasilan per bulan - Earning Per Year (IDR)"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-BPJS-1\",\"LGL-BPJS-2\",\"LGL-BPJS-3\",\"LGL-BPJS-4\",\"LGL-BUN-CV\",\"LGL-BUN-PT-1\",\"LGL-BUN-PT-2\",\"LGL-BUN-RO-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_101",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "default": "Menggunakan email yang sudah ada",
+   "fieldname": "lgl_bpjs_input_email",
+   "fieldtype": "Select",
+   "label": "Input Email",
+   "options": "Menggunakan email yang sudah ada\nDibuatkan email baru"
+  },
+  {
+   "fieldname": "lgl_bpjs_nama_perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan - Company Name",
+   "length": 100
+  },
+  {
+   "fieldname": "lgl_bpjs_alamat_lengkap",
+   "fieldtype": "Small Text",
+   "label": "Alamat lengkap - Address"
+  },
+  {
+   "fieldname": "lgl_bpjs_no_telpon",
+   "fieldtype": "Data",
+   "label": "No Telpon - Telephone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "lgl_bpjs_npwp_perusahaan",
+   "fieldtype": "Attach",
+   "label": "NPWP Perusahaan - Company Tax Card"
+  },
+  {
+   "fieldname": "lgl_bpjs_nomor_induk_berusaha",
+   "fieldtype": "Attach",
+   "label": "Nomor Induk Berusaha (NIB) - Business Identification Number"
+  },
+  {
+   "fieldname": "lgl_bpjs_aset_perusahaan",
+   "fieldtype": "Small Text",
+   "label": "Aset Perusahaan - Compant Asset"
+  },
+  {
+   "fieldname": "lgl_bpjs_identity_card_director",
+   "fieldtype": "Attach",
+   "label": "Identity Card Director- Identitas Diri Direktur"
+  },
+  {
+   "fieldname": "lgl_bpjs_alamat_domisili_domicille_address",
+   "fieldtype": "Small Text",
+   "label": "Alamat Domisili - Domicille Address"
+  },
+  {
+   "fieldname": "lgl_bpjs_nomor_hp",
+   "fieldtype": "Data",
+   "label": "Nomor HP - Phone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "lgl_bpjs_personal_email_address",
+   "fieldtype": "Data",
+   "label": "Personal Email Address",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_bpjs_nama_ibu_kandung",
+   "fieldtype": "Data",
+   "label": "Nama Ibu Kandung",
+   "length": 50
+  },
+  {
+   "fieldname": "lgl_bpjs_npwp_pribadi",
+   "fieldtype": "Attach",
+   "label": "NPWP Pribadi - Personal Tax Card"
+  },
+  {
+   "fieldname": "lgl_bpjs_input_email_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 30,
+   "options": "Email"
+  },
+  {
+   "depends_on": "eval:doc.lgl_bpjs_input_email == 'Menggunakan email yang sudah ada'",
+   "fieldname": "lgl_bpjs_input_email_password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "length": 30
+  },
+  {
+   "fieldname": "column_break_111",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_bpjs_omset_pertahun",
+   "fieldtype": "Currency",
+   "label": "Omset Pertahun - Earning Per Year ((IDR))",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "lgl_bpjs_upah_salary",
+   "fieldtype": "Currency",
+   "label": "Upah - Salary (IDR)",
+   "length": 20,
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-WLKP\",\"LGL-WLKP-1\",\"LGL-WLKP-2\",\"LGL-WLKP-3\",\"LGL-WLKP-4\",\"LGL-BUN-PT-1\",\"LGL-BUN-PT-2\",\"LGL-BUN-RO-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_121",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lgl_wlkp_data_pekerja",
+   "fieldtype": "Table",
+   "label": "Data Pekerja Employee Information",
+   "options": "Data Pekerja Employee Information"
+  },
+  {
+   "fieldname": "lgl_wlkp_nomor_induk_berusaha",
+   "fieldtype": "Attach",
+   "label": "Nomor Induk Berusaha (NIB) - Business Identification Number"
+  },
+  {
+   "fieldname": "lgl_wlkp_email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_123",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_wlkp_upah_tertinggi",
+   "fieldtype": "Currency",
+   "label": "Upah Tertinggi - Highest Wage"
+  },
+  {
+   "fieldname": "lgl_wlkp_upah_terendah",
+   "fieldtype": "Currency",
+   "label": "Upah Terendah - Lowest Wage"
+  },
+  {
+   "fieldname": "lgl_iso_nama_perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan-Company Name",
+   "length": 100
+  },
+  {
+   "fieldname": "lgl_iso_alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat-Address"
+  },
+  {
+   "fieldname": "lgl_iso_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_iso_nomor_telepon",
+   "fieldtype": "Data",
+   "label": "Nomor Telepon - Telephone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "lgl_iso_company_profile",
+   "fieldtype": "Attach",
+   "label": "Company Profile"
+  },
+  {
+   "fieldname": "column_break_134",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_iso_nomor_induk_berusaha",
+   "fieldtype": "Attach",
+   "label": "Nomor Induk Berusaha -Business Identification Number (NIB)"
+  },
+  {
+   "fieldname": "lgl_iso_akta_pendirian",
+   "fieldtype": "Attach",
+   "label": "Akta Pendirian- Deed of Establishment & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_iso_akta_perubahan",
+   "fieldtype": "Attach",
+   "label": "Akta Perubahan - Change of Deed & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_iso_npwp",
+   "fieldtype": "Attach",
+   "label": "Company Taxpayer Identification Number - NPWP"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-ISO-1\", \"LGL-ISO-2\", \"LGL-ISO-3\",\"LGL-ISO-4\", \"LGL-ISO-5\", \"LGL-ISO-6\", \"LGL-ISO-7\", \"LGL-ISO-8\"], doc.legal_sku_code))",
+   "fieldname": "section_break_lgl_iso_1_8",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-ISO-9\", \"LGL-ISO-10\", \"LGL-ISO-11\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\"], doc.legal_sku_code))",
+   "fieldname": "section_break_lgl_iso_9_11",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_iso_2_nama_perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan-Company Name",
+   "length": 100
+  },
+  {
+   "fieldname": "lgl_iso_2_address",
+   "fieldtype": "Small Text",
+   "label": "Alamat-Address"
+  },
+  {
+   "fieldname": "lgl_iso_2_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_iso_2_nomor_telepon",
+   "fieldtype": "Data",
+   "label": "Nomor Telepon - Telephone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "lgl_iso_2_website",
+   "fieldtype": "Data",
+   "label": "Website (jika ada-if any)",
+   "length": 30
+  },
+  {
+   "fieldname": "lgl_iso_2_company_profile",
+   "fieldtype": "Attach",
+   "label": "Company Profile"
+  },
+  {
+   "fieldname": "lgl_iso_2_nomor_induk_berusaha",
+   "fieldtype": "Attach",
+   "label": "Nomor Induk Berusaha -Business Identification Number (NIB)"
+  },
+  {
+   "fieldname": "lgl_iso_2_akta_pendirian",
+   "fieldtype": "Attach",
+   "label": "Akta Pendirian- Deed of Establishment & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_iso_2_akta_perubahan",
+   "fieldtype": "Attach",
+   "label": "Akta Perubahan - Change of Deed & Minister Decree - Surat Keputusan Menteri Hukum dan HAM"
+  },
+  {
+   "fieldname": "lgl_iso_2_npwp",
+   "fieldtype": "Attach",
+   "label": "Company Taxpayer Identification Number - NPWP"
+  },
+  {
+   "fieldname": "lgl_iso_2_struktur_perusahaan_beserta_nama",
+   "fieldtype": "Attach",
+   "label": "Struktur Perusahaan beserta nama - Company Structure with name"
+  },
+  {
+   "fieldname": "lgl_iso_2_jumlah_karyawan",
+   "fieldtype": "Int",
+   "label": "Jumlah Karyawan - Employee"
+  },
+  {
+   "fieldname": "lgl_iso_2_karyawan_tetap",
+   "fieldtype": "Int",
+   "label": "Karyawan Tetap - Permanent Employee"
+  },
+  {
+   "fieldname": "lgl_iso_2_karyawan_kontrak",
+   "fieldtype": "Int",
+   "label": "Karyawan Kontrak - Employee Contract"
+  },
+  {
+   "fieldname": "lgl_iso_2_kop_surat",
+   "fieldtype": "Attach",
+   "label": "Kop Surat - Company Head Letter"
+  },
+  {
+   "fieldname": "lgl_iso_2_logo_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Logo Perusahaan - Company Logo"
+  },
+  {
+   "fieldname": "lgl_iso_2_stempel",
+   "fieldtype": "Attach",
+   "label": "Stempel - Company Stamp"
+  },
+  {
+   "fieldname": "lgl_iso_2_tanda_tangan_direktur",
+   "fieldtype": "Attach",
+   "label": "Tanda tangan Direktur - Director Signature"
+  },
+  {
+   "default": "Tidak",
+   "fieldname": "lgl_iso_2_berikan_pilihan",
+   "fieldtype": "Select",
+   "label": "Apakah merupakan perusahaan konstruksi?",
+   "options": "Ya\nTidak"
+  },
+  {
+   "depends_on": "eval:doc.lgl_iso_2_berikan_pilihan == 'Ya'",
+   "description": "Khusus Badan Usaha Konstruksi",
+   "fieldname": "lgl_iso_2_sertifikat_badan_usaha",
+   "fieldtype": "Attach",
+   "label": "Sertifikat Badan Usaha (SBU) - SBU Certificate "
+  },
+  {
+   "depends_on": "eval:doc.lgl_iso_2_berikan_pilihan == 'Ya'",
+   "fieldname": "lgl_iso_2_proyek_yang_sedang_berjalan",
+   "fieldtype": "Attach",
+   "label": "Proyek yang sedang berjalan - On Going Project Contract"
+  },
+  {
+   "fieldname": "lgl_iso_2_list_vendor",
+   "fieldtype": "Table",
+   "label": "List Vendor",
+   "options": "Legal Iso List Vendor"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-ISO-9\", \"LGL-ISO-10\", \"LGL-ISO-11\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\"], doc.legal_sku_code))",
+   "fieldname": "section_break_161",
+   "fieldtype": "Section Break",
+   "label": "List Vendor"
+  },
+  {
+   "fieldname": "lgl_iso_2_list_supplier",
+   "fieldtype": "Table",
+   "label": "List Supplier",
+   "options": "Legal Iso List Supplier"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-ISO-9\", \"LGL-ISO-10\", \"LGL-ISO-11\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\"], doc.legal_sku_code))",
+   "fieldname": "list_supplier_section",
+   "fieldtype": "Section Break",
+   "label": "List Supplier"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-ISO-9\", \"LGL-ISO-10\", \"LGL-ISO-11\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\"], doc.legal_sku_code))",
+   "fieldname": "section_break_159",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_160",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_152",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-KTA-1\",\"LGL-KTA-2\",\"LGL-KTA-3\",\"LGL-KTA-4\",\"LGL-KTA-1.2\",\"LGL-KTA-2.2\",\"LGL-KTA-3.2\",\"LGL-KTA-4.2\",\"LGL-KTA-5\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\"], doc.legal_sku_code))",
+   "fieldname": "section_lgl_kta",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_kta_nama_perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan - Company Name",
+   "length": 100
+  },
+  {
+   "fieldname": "lgl_kta_alamat_perusahaan",
+   "fieldtype": "Small Text",
+   "label": "Alamat Perusahaan - Company Address"
+  },
+  {
+   "fieldname": "lgl_kta_npwp_perusahaan",
+   "fieldtype": "Attach",
+   "label": "NPWP Perusahaan-Company Tax Card"
+  },
+  {
+   "fieldname": "lgl_kta_wna_wni",
+   "fieldtype": "Select",
+   "label": "WNA / WNI",
+   "options": "WNA\nWNI"
+  },
+  {
+   "fieldname": "lgl_kta_pas_foto_pjbu",
+   "fieldtype": "Attach",
+   "label": "Pas Foto PJBU - Director Photo"
+  },
+  {
+   "fieldname": "lgl_kta_identitas_pjbu",
+   "fieldtype": "Attach",
+   "label": "Identitas PJBU - Director Identity Card"
+  },
+  {
+   "depends_on": "eval:doc.lgl_kta_wna_wni == 'WNA'",
+   "fieldname": "lgl_kta_kitas_pjbu",
+   "fieldtype": "Attach",
+   "label": "KITAS PJBU - Director Kitas"
+  },
+  {
+   "fieldname": "lgl_kta_npwp_pjbu",
+   "fieldtype": "Attach",
+   "label": "NPWP PJBU - Director Tax Card"
+  },
+  {
+   "fieldname": "column_break_173",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SBU-1\"], doc.legal_sku_code))",
+   "fieldname": "section_lgl_sbu",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_sbu_kitas_pjbu",
+   "fieldtype": "Attach",
+   "label": "KITAS PJBU - KITAS Chief RO/KTP"
+  },
+  {
+   "fieldname": "lgl_sbu_npwp_pjbu",
+   "fieldtype": "Attach",
+   "label": "NPWP PJBU -  Chief RO Tax Card"
+  },
+  {
+   "fieldname": "lgl_sbu_sertifikat_badan_usaha",
+   "fieldtype": "Attach",
+   "label": "Sertifikat Badan Usaha (SBU) - SBU Certificate "
+  },
+  {
+   "default": "Tidak",
+   "fieldname": "lgl_sbu_pergantian_alamat",
+   "fieldtype": "Select",
+   "label": "Pergantian Alamat?",
+   "options": "Tidak\nYa"
+  },
+  {
+   "depends_on": "eval:doc.lgl_sbu_pergantian_alamat == 'Ya'",
+   "fieldname": "lgl_sbu_surat_domilsili",
+   "fieldtype": "Small Text",
+   "label": "Surat Domilsili - Domicille Letter"
+  },
+  {
+   "fieldname": "lgl_npwp_1_input_email_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "depends_on": "eval:doc.lgl_npwp_1_input_email == 'Menggunakan email yang sudah ada'",
+   "fieldname": "lgl_npwp_1_input_email_password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "length": 50
+  },
+  {
+   "default": "Menggunakan email yang sudah ada",
+   "fieldname": "lgl_npwp_2_input_email",
+   "fieldtype": "Select",
+   "label": "Input Email",
+   "options": "Menggunakan email yang sudah ada\nDibuatkan email baru"
+  },
+  {
+   "fieldname": "lgl_npwp_2_input_email_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_npwp_2_input_email_password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "length": 50
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-CV-1\",\"LGL-BUN-CV\"], doc.legal_sku_code))",
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.lgl_cv_1_business_fields == 'Lainnya'",
+   "fieldname": "lgl_cv_1_business_fields_lainnya",
+   "fieldtype": "Data",
+   "label": "Business Fields Lainnya"
+  },
+  {
+   "fieldname": "lgl_pt_1_business_fields",
+   "fieldtype": "Select",
+   "label": "Business Fields - Bidang Usaha",
+   "length": 60,
+   "options": "Pertanian, Kehutanan dan Perikanan\nPertambangan dan Penggalian\nIndustri Pengolahan\nPengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin\nTreatment Air, Treatment Air Limbah, Treatment dan Pemulihan Material Sampah, dan Aktivitas Remediasi\nKonstruksi\nPerdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor\nPengangkutan dan Pergudangan\nPenyediaan Akomodasi Dan Penyediaan Makan Minum\nInformasi Dan Komunikasi\nAktivitas Keuangan dan Asuransi\nReal Estat\nAktivitas Profesional, Ilmiah Dan Teknis\nAktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi, Ketenagakerjaan, Agen Perjalanan dan Penunjang Usaha Lainnya\nAdministrasi Pemerintahan, Pertahanan Dan Jaminan Sosial Wajib\nPendidikan\nAktivitas Kesehatan Manusia Dan Aktivitas Sosial\nKesenian, Hiburan Dan Rekreasi\nAktivitas Jasa Lainnya\nAktivitas Rumah Tangga Sebagai Pemberi Kerja; Aktivitas Yang Menghasilkan Barang Dan Jasa Oleh Rumah Tangga yang Digunakan untuk Memenuhi Kebutuhan Sendiri\nAktivitas Badan Internasional Dan Badan Ekstra Internasional Lainnya"
+  },
+  {
+   "depends_on": "eval:doc.lgl_pt_1_business_fields == 'Lainnya'",
+   "fieldname": "lgl_pt_1_business_fields_lainnya",
+   "fieldtype": "Data",
+   "label": "Business Fields Lainnya"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PT-1\",\"LGL-BUN-PT-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_47",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commisioner_and_director_composition_pma",
+   "fieldtype": "Table",
+   "label": "Commisioner and Director Composition",
+   "options": "Commisioner and Director Composition"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PMA-1\",\"LGL-BUN-PT-2\"], doc.legal_sku_code))",
+   "fieldname": "section_break_60",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commisioner_and_director_composition_lgl_pt",
+   "fieldtype": "Table",
+   "label": "Commisioner and Director Composition",
+   "options": "Commisioner and Director Composition"
+  },
+  {
+   "fieldname": "lgl_pma_1_business_fields",
+   "fieldtype": "Select",
+   "label": "Business Fields - Bidang Usaha",
+   "options": "Pertanian, Kehutanan dan Perikanan\nPertambangan dan Penggalian\nIndustri Pengolahan\nPengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin\nTreatment Air, Treatment Air Limbah, Treatment dan Pemulihan Material Sampah, dan Aktivitas Remediasi\nKonstruksi\nPerdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor\nPengangkutan dan Pergudangan\nPenyediaan Akomodasi Dan Penyediaan Makan Minum\nInformasi Dan Komunikasi\nAktivitas Keuangan dan Asuransi\nReal Estat\nAktivitas Profesional, Ilmiah Dan Teknis\nAktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi, Ketenagakerjaan, Agen Perjalanan dan Penunjang Usaha Lainnya\nAdministrasi Pemerintahan, Pertahanan Dan Jaminan Sosial Wajib\nPendidikan\nAktivitas Kesehatan Manusia Dan Aktivitas Sosial\nKesenian, Hiburan Dan Rekreasi\nAktivitas Jasa Lainnya\nAktivitas Rumah Tangga Sebagai Pemberi Kerja; Aktivitas Yang Menghasilkan Barang Dan Jasa Oleh Rumah Tangga yang Digunakan untuk Memenuhi Kebutuhan Sendiri\nAktivitas Badan Internasional Dan Badan Ekstra Internasional Lainnya"
+  },
+  {
+   "depends_on": "eval:doc.lgl_pma_1_business_fields == 'Lainnya'",
+   "fieldname": "lgl_pma_1_business_fields_lainnya",
+   "fieldtype": "Data",
+   "label": "Business Fields Lainnya",
+   "length": 50
+  },
+  {
+   "fieldname": "lgl_sburo_table",
+   "fieldtype": "Table",
+   "label": "LGL SBURO Table",
+   "options": "LGL SBURO Table"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SBURO-1\",\"LGL-SBURO-2\",\"LGL-SBURO-3\",\"LGL-SBURO-4\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKRO-4\"], doc.legal_sku_code))",
+   "fieldname": "section_break_sburo",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SBUPT-1\",\"LGL-SBUPT-2\",\"LGL-SBUPT-3\",\"LGL-SBUPT-4\",\"LGL-SBUPTPMA-1\",\"LGL-SBUPTPMA-2\",\"LGL-SBUPTPMA-3\",\"LGL-SBUPTPMA-4\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPTPMA-4\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\",\"LGL-BUN-IUJKPT-4\"], doc.legal_sku_code))",
+   "fieldname": "section_break_sbupt",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_sbupt_table",
+   "fieldtype": "Table",
+   "label": "LGL SBUPT Table",
+   "options": "LGL SBUPT Table"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lgl_taxdata_akta_perubahan",
+   "fieldtype": "Attach",
+   "label": "Akta Perubahan"
+  },
+  {
+   "fieldname": "lgl_taxdata_npwp_direktur",
+   "fieldtype": "Attach",
+   "label": "NPWP Direktur"
+  },
+  {
+   "fieldname": "column_break_179",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_taxdata_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_taxdata_email_password",
+   "fieldtype": "Data",
+   "label": "Email Password",
+   "length": 50
+  },
+  {
+   "fieldname": "lgl_taxdata_nib",
+   "fieldtype": "Attach",
+   "label": "NIB"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-TAXDATA-1\",\"LGL-TAXDATA-2\"], doc.legal_sku_code))",
+   "fieldname": "section_lgl_taxdata",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-BUJKA\",\"LGL-BUN-RO-1\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKRO-4\"], doc.legal_sku_code))",
+   "fieldname": "section_break_lgl_bujka",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_bujka_mother_company_article_of_association",
+   "fieldtype": "Attach",
+   "label": "Mother Company Article Of Association (Legalized by Notary Public and Indonesia Embassy in China) - Akta Pendirian Perusahaan Induk"
+  },
+  {
+   "fieldname": "lgl_bujka_mother_company_business_license_legalized_by_notary",
+   "fieldtype": "Attach",
+   "label": "Mother Company Business License (Legalized by Notary Public and Indonesia Embassy in China) - Izin Usaha Perusahaan Induk "
+  },
+  {
+   "fieldname": "lgl_bujka_mother_company_phone_number_nomor_telfon",
+   "fieldtype": "Data",
+   "label": "Mother Company Phone Number - Nomor Telfon Perusahaan Induk"
+  },
+  {
+   "fieldname": "lgl_bujka_ro_phone_number_nomor_telfon_kantor_perwakilan",
+   "fieldtype": "Data",
+   "label": "RO Phone Number - Nomor Telfon Kantor Perwakilan"
+  },
+  {
+   "fieldname": "lgl_bujka_ro_address_alamat_kantor_perwakilan",
+   "fieldtype": "Small Text",
+   "label": "RO Address - Alamat Kantor Perwakilan"
+  },
+  {
+   "fieldname": "column_break_189",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_bujka_ro_domicille_letter_surat_domisili_kantor_perwakilan",
+   "fieldtype": "Attach",
+   "label": "RO Domicille Letter - Surat Domisili Kantor Perwakilan"
+  },
+  {
+   "fieldname": "lgl_bujka_authorized_capital_modal_dasar",
+   "fieldtype": "Data",
+   "label": "Authorized Capital - Modal Dasar"
+  },
+  {
+   "fieldname": "lgl_bujka_chief_representative_passport_passport_kepala",
+   "fieldtype": "Attach",
+   "label": "Chief Representative Passport - Passport Kepala Kantor Perwakilan"
+  },
+  {
+   "fieldname": "lgl_bujka_chief_representative_phone_number_nomor_telfon",
+   "fieldtype": "Data",
+   "label": "Chief Representative Phone Number - Nomor Telfon Kepala Kantor Perwakilan"
+  },
+  {
+   "fieldname": "lgl_bujka_chief_representative_address_alamat_kepala",
+   "fieldtype": "Data",
+   "label": "Chief Representative Address - Alamat Kepala Kantor Perwakilan"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-OSS-1\",\"LGL-OSS-2\",\"LGL-OSS-3\",\"LGL-OSS-4\",\"LGL-NIB-1\",\"LGL-NIB-2\",\"LGL-NIB-3\",\"LGL-NIB-4\",\"LGL-BUN-CV\",\"LGL-BUN-PT-1\",\"LGL-BUN-PT-2\",\"LGL-BUN-RO-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_oss_nib",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_oss_nib_username_oss",
+   "fieldtype": "Data",
+   "label": "Username OSS",
+   "length": 50
+  },
+  {
+   "fieldname": "lgl_oss_nib_password_oss",
+   "fieldtype": "Data",
+   "label": "Password OSS",
+   "length": 50
+  },
+  {
+   "fieldname": "lgl_oss_nib_hal_yang_akan_diubah",
+   "fieldtype": "Data",
+   "label": "Hal yang akan diubah"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-STAMP-1\",\"LGL-STAMP-2\",\"LGL-STAMP-3\",\"LGL-STAMP-4\",\"LGL-BUN-CV\",\"LGL-BUN-PT-1\",\"LGL-BUN-PT-2\",\"LGL-BUN-RO-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_lgl_stamp",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_stamp_logo_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Logo Perusahaan"
+  },
+  {
+   "fieldname": "lgl_stamp_nama_perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan",
+   "length": 100
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SKKLSBU\",\"LGL-SKKESDM\",\"LGL-BUN-IUJKRO-1\",\"LGL-BUN-IUJKRO-2\",\"LGL-BUN-IUJKRO-3\",\"LGL-BUN-IUJKRO-4\",\"LGL-BUN-IUJKPTPMA-1\",\"LGL-BUN-IUJKPTPMA-2\",\"LGL-BUN-IUJKPTPMA-3\",\"LGL-BUN-IUJKPTPMA-4\",\"LGL-BUN-IUJKPT-1\",\"LGL-BUN-IUJKPT-2\",\"LGL-BUN-IUJKPT-3\",\"LGL-BUN-IUJKPT-4\"], doc.legal_sku_code))",
+   "fieldname": "section_break_skklsbu",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_skklsbu_list_kode_subklasifikasi",
+   "fieldtype": "Data",
+   "label": "List Kode Subklasifikasi",
+   "length": 50
+  },
+  {
+   "depends_on": "eval:doc.type != 'Legal'",
+   "fieldname": "section_order_items_visa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-BPJS-R\",\"LGL-NPWP-R-1\",\"LGL-NPWP-R-2\",\"LGL-RO-R\",\"LGL-NPWP-R-3\",\"LGL-NPWP-R-4\",\"LGL-PT-R\",\"LGL-BUN-RO-2\",\"LGL-BUN-PT-3\"], doc.legal_sku_code))",
+   "fieldname": "section_break_lgl_revo",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_revo_nib",
+   "fieldtype": "Attach",
+   "label": "NIB"
+  },
+  {
+   "fieldname": "lgl_revo_npwp",
+   "fieldtype": "Attach",
+   "label": "NPWP"
+  },
+  {
+   "fieldname": "lgl_revo_bpjs",
+   "fieldtype": "Attach",
+   "label": "BPJS"
+  },
+  {
+   "fieldname": "column_break_208",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_revo_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 30
+  },
+  {
+   "fieldname": "lgl_revo_password_email",
+   "fieldtype": "Data",
+   "label": "Password Email",
+   "length": 30,
+   "options": "Email"
+  },
+  {
+   "fieldname": "lgl_revo_username_oss",
+   "fieldtype": "Data",
+   "label": "Username OSS",
+   "length": 30
+  },
+  {
+   "fieldname": "lgl_revo_password_oss",
+   "fieldtype": "Data",
+   "label": "Password OSS",
+   "length": 30
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-BPJS-5\",\"LGL-BPJS-6\"], doc.legal_sku_code))",
+   "fieldname": "section_break_bpjs_5_6",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_bpjs_2_alamat_domisili_domicille_address",
+   "fieldtype": "Small Text",
+   "label": "Alamat Domisili - Domicille Address"
+  },
+  {
+   "fieldname": "lgl_bpjs_2_nomor_hp_phone_number",
+   "fieldtype": "Data",
+   "label": "Nomor HP - Phone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "lgl_bpjs_2_personal_email_address",
+   "fieldtype": "Data",
+   "label": "Personal Email Address",
+   "length": 50,
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_217",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lgl_bpjs_2_nama_ibu_kandung",
+   "fieldtype": "Data",
+   "label": "Nama Ibu Kandung",
+   "length": 30
+  },
+  {
+   "fieldname": "lgl_bpjs_2_npwp_pribadi_personal_tax_card",
+   "fieldtype": "Attach",
+   "label": "NPWP Pribadi - Personal Tax Card"
+  },
+  {
+   "fieldname": "lgl_bpjs_2_upah_salary",
+   "fieldtype": "Currency",
+   "label": "Upah - Salary",
+   "length": 10
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-WLKP\",\"LGL-WLKP-1\",\"LGL-WLKP-2\",\"LGL-WLKP-3\",\"LGL-WLKP-4\",\"LGL-BUN-CV\",\"LGL-BUN-PT-1\",\"LGL-BUN-PT-2\",\"LGL-BUN-RO-1\"], doc.legal_sku_code))",
+   "fieldname": "section_break_wlkp",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SPVHALAL-1\",\"LGL-SILAPTA\"], doc.legal_sku_code))",
+   "fieldname": "section_break_lgl_spvhalal_1_lgl_silapta",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_silapta_npwp",
+   "fieldtype": "Attach",
+   "label": "NPWP"
+  },
+  {
+   "fieldname": "lgl_silapta_sbu",
+   "fieldtype": "Attach",
+   "label": "SBU"
+  },
+  {
+   "fieldname": "lgl_silapta_nib",
+   "fieldtype": "Attach",
+   "label": "NIB"
+  },
+  {
+   "fieldname": "lgl_silapta_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 60
+  },
+  {
+   "fieldname": "lgl_silapta_password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "length": 50
+  },
+  {
+   "fieldname": "lgl_silapta_bujka",
+   "fieldtype": "Attach",
+   "label": "BUJKA"
+  },
+  {
+   "fieldname": "lgl_silapta_kontrak_proyek",
+   "fieldtype": "Attach",
+   "label": "Kontrak Proyek"
+  },
+  {
+   "fieldname": "lgl_silapta_laporan_keuangan_bujka_induk",
+   "fieldtype": "Attach",
+   "label": "Laporan Keuangan BUJKA Induk"
+  },
+  {
+   "fieldname": "lgl_silapta_laporan_keuangan_bujka_but",
+   "fieldtype": "Attach",
+   "label": "Laporan Keuangan BUJKA BUT"
+  },
+  {
+   "fieldname": "lgl_silapta_cv_tki_pendamping",
+   "fieldtype": "Attach",
+   "label": "CV TKI Pendamping"
+  },
+  {
+   "fieldname": "lgl_silapta_cv_tka",
+   "fieldtype": "Attach",
+   "label": "CV TKA"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SPVHALAL-1\",\"LGL-SILAPTA\"], doc.legal_sku_code))",
+   "fieldname": "data_perusahaan_mitra_kso_section",
+   "fieldtype": "Section Break",
+   "label": "DATA PERUSAHAAN MITRA KSO"
+  },
+  {
+   "fieldname": "lgl_silapta_nib_mitra_kso",
+   "fieldtype": "Attach",
+   "label": "NIB Mitra KSO"
+  },
+  {
+   "fieldname": "lgl_silapta_npwp_mitra_kso",
+   "fieldtype": "Attach",
+   "label": "NPWP Mitra KSO"
+  },
+  {
+   "fieldname": "lgl_silapta_sbu_mitra_kso",
+   "fieldtype": "Attach",
+   "label": "SBU Mitra KSO"
+  },
+  {
+   "fieldname": "lgl_silapta_konstribusi_modal_bujka",
+   "fieldtype": "Int",
+   "label": "Konstribusi Modal BUJKA",
+   "length": 40
+  },
+  {
+   "fieldname": "lgl_silapta_konstribusi_modal_bujka_mitra_lokal",
+   "fieldtype": "Int",
+   "label": "Konstribusi Modal BUJKA Mitra Lokal",
+   "length": 40
+  },
+  {
+   "fieldname": "lgl_silapta_daftar_alat_mitra_kso",
+   "fieldtype": "Attach",
+   "label": "Daftar Alat Mitra KSO"
+  },
+  {
+   "fieldname": "lgl_silapta_daftar_alat",
+   "fieldtype": "Attach",
+   "label": "Daftar Alat"
+  },
+  {
+   "fieldname": "lgl_silapta_material_mitra_kso",
+   "fieldtype": "Attach",
+   "label": "Material Mitra KSO"
+  },
+  {
+   "fieldname": "lgl_silapta_material",
+   "fieldtype": "Attach",
+   "label": "Material"
+  },
+  {
+   "fieldname": "lgl_silapta_pengalaman_kerja_luar_negri",
+   "fieldtype": "Attach",
+   "label": "Pengalaman Kerja Luar Negri"
+  },
+  {
+   "fieldname": "lgl_silapta_pengalaman_kerja_dalam_negri",
+   "fieldtype": "Attach",
+   "label": "Pengalaman Kerja Dalam Negri"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-SPVHALAL-1\",\"LGL-SILAPTA\"], doc.legal_sku_code))",
+   "fieldname": "data_perusahaan_sub_penyedia_jasa_section",
+   "fieldtype": "Section Break",
+   "label": "DATA PERUSAHAAN SUB PENYEDIA JASA"
+  },
+  {
+   "fieldname": "lgl_silapta_nib_sub_penyedia_jasa",
+   "fieldtype": "Attach",
+   "label": "NIB SUB PENYEDIA JASA"
+  },
+  {
+   "fieldname": "lgl_silapta_nilai_kontrak",
+   "fieldtype": "Int",
+   "label": "NILAI KONTRAK"
+  },
+  {
+   "fieldname": "lgl_silapta_kontrak_dengan_sub_penyedia_jasa",
+   "fieldtype": "Attach",
+   "label": "Kontrak dengan SUB PENYEDIA JASA"
+  },
+  {
+   "fieldname": "lgl_silapta_struktur_organinsasi_proyek",
+   "fieldtype": "Attach",
+   "label": "Struktur Organinsasi Proyek"
+  },
+  {
+   "fieldname": "lgl_silapta_cv_manager",
+   "fieldtype": "Attach",
+   "label": "CV Manager"
+  },
+  {
+   "fieldname": "lgl_silapta_laporan_kemajuan_proyek_yang_di_ttd_oleh",
+   "fieldtype": "Attach",
+   "label": "Laporan kemajuan Proyek yang di ttd oleh pengguna proyek"
+  },
+  {
+   "fieldname": "lgl_silapta_skaskt_tenaga_kerja_proyek",
+   "fieldtype": "Attach",
+   "label": "SKA/SKT Tenaga Kerja Proyek"
+  },
+  {
+   "fieldname": "lgl_silapta_daftar_material_dan_distributor_material",
+   "fieldtype": "Attach",
+   "label": "Daftar Material dan Distributor Material"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-PKP\"], doc.legal_sku_code))",
+   "fieldname": "legal_required_document_section",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_pkp_ktp_direktur",
+   "fieldtype": "Attach",
+   "label": "KTP Direktur"
+  },
+  {
+   "fieldname": "lgl_pkp_npwp_direktur",
+   "fieldtype": "Attach",
+   "label": "NPWP Direktur"
+  },
+  {
+   "fieldname": "lgl_pkp_nib",
+   "fieldtype": "Attach",
+   "label": "NIB"
+  },
+  {
+   "fieldname": "lgl_pkp_npwp_perusahaan",
+   "fieldtype": "Attach",
+   "label": "NPWP Perusahaan"
+  },
+  {
+   "fieldname": "lgl_pkp_akta_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Akta Perusahaan"
+  },
+  {
+   "fieldname": "lgl_pkp_laporan_keuangan_bulan_terahir",
+   "fieldtype": "Attach",
+   "label": "Laporan Keuangan Bulan Terahir"
+  },
+  {
+   "fieldname": "lgl_pkp_daftar_aset_perusahaan",
+   "fieldtype": "Attach",
+   "label": "Daftar Aset Perusahaan"
+  },
+  {
+   "fieldname": "lgl_pkp_foto_tempat_kegiatan_usaha",
+   "fieldtype": "Attach",
+   "label": "Foto Tempat Kegiatan Usaha"
+  },
+  {
+   "fieldname": "lgl_pkp_denah_lokasi_usaha",
+   "fieldtype": "Attach",
+   "label": "Denah Lokasi Usaha"
+  },
+  {
+   "depends_on": "eval:((doc.type == \"Legal\") && in_list([\"LGL-BUN-LAPSPT\"], doc.legal_sku_code))",
+   "fieldname": "legal_required_document_section_lgl_bun_lapspt",
+   "fieldtype": "Section Break",
+   "label": "Legal Required Document"
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_formulir_spt_tahunan_badan_1771",
+   "fieldtype": "Attach",
+   "label": "Formulir SPT Tahunan Badan 1771"
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_sp_masa_pph_pasal_21",
+   "fieldtype": "Attach",
+   "label": "SP Masa PPh Pasal 21 (Periode pajak Januari \u2013 Desember)"
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_bukti_pemotongan_pph_pasal_23",
+   "fieldtype": "Attach",
+   "label": "Bukti pemotongan PPh Pasal 23 (Periode pajak Januari \u2013 Desember)."
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_bukti_potong_pph_pasal_4_ayat_2",
+   "fieldtype": "Attach",
+   "label": "Bukti potong PPh Pasal 4 ayat 2 (Periode Pajak Januari \u2013 Desember)"
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_spt_masa_ppn",
+   "fieldtype": "Attach",
+   "label": "SPT Masa PPN (termasuk semua faktur pajak yang masuk (Pajak Masukan) dan faktur pajak keluar (Pajak Keluaran) periode Januari \u2013 Desember)."
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_bukti_potong_pph",
+   "fieldtype": "Attach",
+   "label": "Bukti potong PPh Pasal 22 dan Surat Setoran Pajak (SSP) PPh Pasal 25 Impor (Periode pajak Januari \u2013 Desember)."
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_bukti_pembayaran_untuk_surat_tagihan_pajak_pph",
+   "fieldtype": "Attach",
+   "label": "Bukti pembayaran untuk Surat Tagihan Pajak (STP) PPh Pasal 25 (Periode pajak Januari \u2013 Desember)"
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_bukti_pembayaran_pph",
+   "fieldtype": "Attach",
+   "label": "Bukti pembayaran PPh Pasal 25 (Periode Pajak Januari \u2013 Desember)."
+  },
+  {
+   "fieldname": "lgl_bun_lapspt_laporan_keuangan",
+   "fieldtype": "Attach",
+   "label": "Laporan keuangan (neraca dan rugi laba), termasuk laporan hasil audit akuntan publik."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-10-13 00:48:54.713128",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Detail Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "item_code,item_name,qty",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

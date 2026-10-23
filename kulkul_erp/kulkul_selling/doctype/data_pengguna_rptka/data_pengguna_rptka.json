@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-20 21:34:51.395860",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "no_passport",
+  "nama_latin",
+  "visa",
+  "tanggal_awal_visa",
+  "tanggal_expired_visa",
+  "jabatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nama PT",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "no_passport",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No Passport"
+  },
+  {
+   "fieldname": "nama_latin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Latin"
+  },
+  {
+   "fieldname": "visa",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Visa"
+  },
+  {
+   "fieldname": "tanggal_awal_visa",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Awal Visa"
+  },
+  {
+   "fieldname": "tanggal_expired_visa",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Expired Visa"
+  },
+  {
+   "fieldname": "jabatan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Jabatan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-20 21:37:32.895753",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Data Pengguna RPTKA",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

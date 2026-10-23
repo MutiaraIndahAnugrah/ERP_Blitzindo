@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:sku_code",
+ "creation": "2022-04-27 03:52:54.514116",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sku_code",
+  "is_bundle",
+  "service_name",
+  "bundle_name",
+  "sub_name",
+  "column_break_3",
+  "agent_name",
+  "agent_service_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "sku_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SKU Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_name",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Sub Name"
+  },
+  {
+   "depends_on": "eval:doc.is_bundle == 0",
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Name"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "label": "Agent Name"
+  },
+  {
+   "fieldname": "agent_service_type",
+   "fieldtype": "Data",
+   "label": "Agent Service Type"
+  },
+  {
+   "depends_on": "eval:doc.is_bundle == 1",
+   "fieldname": "bundle_name",
+   "fieldtype": "Data",
+   "label": "Bundle Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_bundle",
+   "fieldtype": "Check",
+   "label": "Is Bundle"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-19 10:09:58.079682",
+ "modified_by": "Administrator",
+ "module": "Kulkul Selling",
+ "name": "Legal SKU Code",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "sku_code,service_name,sub_name,agent_name,agent_service_type",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "title_field": "sku_code"
+}

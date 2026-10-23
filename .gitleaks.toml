@@ -1,0 +1,13 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "DocType field_order identifiers, not stored credentials"
+regexTarget = "match"
+regexes = [
+  '''lgl_npwp_1_input_email_password",\s*"section_break_94"''',
+  '''lgl_npwp_2_input_email_password",\s*"section_break_101"''',
+  '''lgl_revo_password_oss",\s*"section_break_bpjs_5_6"''',
+]
+
+

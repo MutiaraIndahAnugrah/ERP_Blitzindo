@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include kulkul_erp *.css
+recursive-include kulkul_erp *.csv
+recursive-include kulkul_erp *.html
+recursive-include kulkul_erp *.ico
+recursive-include kulkul_erp *.js
+recursive-include kulkul_erp *.json
+recursive-include kulkul_erp *.md
+recursive-include kulkul_erp *.png
+recursive-include kulkul_erp *.py
+recursive-include kulkul_erp *.svg
+recursive-include kulkul_erp *.txt
+recursive-exclude kulkul_erp *.pyc
