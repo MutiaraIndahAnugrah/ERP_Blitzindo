@@ -246,3 +246,15 @@ user_data_fields = [
 # 	"kulkul_erp.auth.validate"
 # ]
 
+
+
+# Upload compression: durable outbox, processed after commit by a separate worker.
+_file_hooks = doc_events.setdefault("File", {})
+_file_after_insert = _file_hooks.get("after_insert", [])
+_file_hooks["after_insert"] = ([_file_after_insert] if isinstance(_file_after_insert, str) else list(_file_after_insert)) + [
+    "kulkul_erp.asset_compression.events.after_insert"
+]
+scheduler_events = globals().get("scheduler_events", {})
+scheduler_events.setdefault("cron", {}).setdefault("* * * * *", []).append(
+    "kulkul_erp.asset_compression.events.dispatch"
+)

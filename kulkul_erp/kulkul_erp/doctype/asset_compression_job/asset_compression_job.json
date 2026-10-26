@@ -1,0 +1,73 @@
+{
+ "doctype": "DocType",
+ "name": "Asset Compression Job",
+ "module": "Kulkul Erp",
+ "autoname": "hash",
+ "engine": "InnoDB",
+ "track_changes": 0,
+ "field_order": [
+  "file",
+  "status",
+  "attempts",
+  "original_bytes",
+  "result_bytes",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "file",
+   "label": "File ID",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nQueued\nProcessing\nDone\nSkipped\nFailed",
+   "default": "Pending",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "attempts",
+   "label": "Attempts",
+   "fieldtype": "Int",
+   "read_only": 1,
+   "in_list_view": false
+  },
+  {
+   "fieldname": "original_bytes",
+   "label": "Original bytes",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "in_list_view": false
+  },
+  {
+   "fieldname": "result_bytes",
+   "label": "Result bytes",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "in_list_view": false
+  },
+  {
+   "fieldname": "reason",
+   "label": "Reason",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": true
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC"
+}

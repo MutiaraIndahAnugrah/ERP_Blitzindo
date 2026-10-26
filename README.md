@@ -39,3 +39,7 @@ Mengunggah source ke GitHub tidak melakukan deploy. Perubahan cetak hanya mengga
 Database, site_config, kredensial, invoice PDF, backup, serta hasil audit berisi data pribadi tidak disimpan di repository ini. Pengaturan dan Print Format yang dibuat lewat UI Frappe berada di database; source repo bukan backup lengkap sebuah site.
 
 Lisensi existing aplikasi: MIT, lihat [license.txt](license.txt). Aset pihak ketiga mempertahankan pemberitahuan lisensi masing-masing.
+
+## Background asset compression
+
+Implementasi opsional untuk upload baru: [flow dan hasil tes](docs/asset-compression.md), [konfigurasi/deploy/rollback](docs/asset-compression-deployment.md). Memakai antrean khusus, default OFF. Belum dideploy production.

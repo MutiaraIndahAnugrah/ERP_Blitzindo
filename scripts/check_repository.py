@@ -23,7 +23,7 @@ def main():
                 counts["json"] += 1
         except (SyntaxError, ValueError, UnicodeError) as error:
             failures.append(str(relative) + ": " + type(error).__name__)
-    for path in [ROOT / "invoice_print/install.py", ROOT / "invoice_print/self_test.py"]:
+    for path in [ROOT / "invoice_print/install.py", ROOT / "invoice_print/self_test.py", *sorted((ROOT / "tests").glob("*.py"))]:
         ast.parse(path.read_text(encoding="utf-8-sig"), filename=str(path.relative_to(ROOT)))
     template = (ROOT / "invoice_print/items.html").read_text(encoding="utf8")
     if "blitz-dynamic-source-items-v1" not in template or "Harga /" not in template:
